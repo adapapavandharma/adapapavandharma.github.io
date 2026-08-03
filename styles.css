@@ -232,6 +232,32 @@ em { font-style: italic; color: var(--text-2); }
 @keyframes blink { to { visibility: hidden; } }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 
+/* availability — the first thing a recruiter scans for */
+.status {
+  display: inline-flex; align-items: center; gap: 9px; flex-wrap: wrap;
+  font-size: 13px;
+  border: 1px solid var(--accent-line);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 7px 16px 7px 13px;
+  margin: 0 0 26px;
+}
+.status b { color: var(--accent); font-weight: 650; }
+/* the tinted pill background lifts --muted to ~4.4:1, just under AA */
+.status .dim { color: var(--text-2); }
+.status-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent); flex: 0 0 8px;
+  box-shadow: 0 0 0 0 var(--accent-line);
+  animation: pulse 2.4s ease-out infinite;
+}
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 var(--accent-line); }
+  70%  { box-shadow: 0 0 0 7px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+@media (prefers-reduced-motion: reduce) { .status-dot { animation: none; } }
+
 .hero-blurb {
   font-family: var(--sans);
   font-size: 16px;

@@ -43,6 +43,20 @@ $bMuted  = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb
 # prompt line
 $g.DrawString('pavan@portfolio:~$ whoami', $fMonoS, $bMuted, $M, 86)
 
+# availability pill, top right
+$pillW = 268; $pillH = 44; $pillX = $W - $M - $pillW; $pillY = 80
+$pillPath = New-Object System.Drawing.Drawing2D.GraphicsPath
+$r = $pillH / 2
+$pillPath.AddArc($pillX, $pillY, $r*2, $pillH, 90, 180)
+$pillPath.AddArc(($pillX + $pillW - $r*2), $pillY, $r*2, $pillH, 270, 180)
+$pillPath.CloseFigure()
+$pillFill = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(30, 74, 222, 128))
+$pillPen  = New-Object System.Drawing.Pen([System.Drawing.Color]::FromArgb(110, 74, 222, 128), 1)
+$g.FillPath($pillFill, $pillPath)
+$g.DrawPath($pillPen, $pillPath)
+$g.FillEllipse($bAccent, [float]($pillX + 22), [float]($pillY + 18), [float]9, [float]9)
+$g.DrawString('AVAILABLE NOW', $fMonoS, $bAccent, [float]($pillX + 42), [float]($pillY + 9))
+
 # name
 $g.DrawString('PAVAN DHARMA', $fName, $bWhite, ($M - 8), 132)
 $g.DrawString('ADAPA', $fName, $bWhite, ($M - 8), 226)
