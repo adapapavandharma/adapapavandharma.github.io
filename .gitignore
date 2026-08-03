@@ -1,0 +1,10 @@
+﻿# OS / editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# never commit the source resumes — PDFs in resume/ are the published copies
+*.docx
+~$*

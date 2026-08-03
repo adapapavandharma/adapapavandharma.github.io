@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pavan Dharma Adapa — Healthcare &amp; Data Analytics</title>
+<meta name="description" content="Pavan Dharma Adapa — M.S. Computer Science &amp; Engineering. Healthcare data analytics and business intelligence: SQL, Python, Tableau, Power BI, ETL pipelines, dimensional modeling, predictive modeling.">
+<meta name="author" content="Pavan Dharma Adapa">
+<link rel="canonical" href="https://adapapavandharma.github.io/">
+
+<!-- Open Graph / LinkedIn + Twitter link previews -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Pavan Dharma Adapa — Healthcare &amp; Data Analytics">
+<meta property="og:description" content="M.S. CSE. ETL pipelines, dimensional data warehouses, and clinical-operations dashboards. 900K+ records analyzed, 95% processing time cut, 87% forecast accuracy.">
+<meta property="og:url" content="https://adapapavandharma.github.io/">
+<meta property="og:image" content="https://adapapavandharma.github.io/assets/og.png">
+<meta property="profile:first_name" content="Pavan Dharma">
+<meta property="profile:last_name" content="Adapa">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0e0d" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfdfc" media="(prefers-color-scheme: light)">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e0d'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='17' font-weight='700' fill='%234ade80' text-anchor='middle'%3E&gt;_%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pavan Dharma Adapa",
+  "url": "https://adapapavandharma.github.io/",
+  "email": "mailto:adapapavandharma@gmail.com",
+  "telephone": "+1-662-370-9614",
+  "jobTitle": "Healthcare Data Analyst",
+  "address": { "@type": "PostalAddress", "addressRegion": "MS", "addressCountry": "US" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Mississippi State University" },
+    { "@type": "CollegeOrUniversity", "name": "Malla Reddy University" }
+  ],
+  "knowsAbout": ["SQL","Python","Tableau","Power BI","ETL","Dimensional Modeling","Data Warehousing","Epic Clarity","Epic Caboodle","Revenue Cycle Analytics","Population Health","Predictive Modeling","Exploratory Data Analysis"],
+  "sameAs": [
+    "https://www.linkedin.com/in/adapapavandharma",
+    "https://github.com/adapapavandharma"
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ══════════════════ header ══════════════════ -->
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#top" aria-label="Pavan Dharma Adapa — home">
+      <span class="brand-mark" aria-hidden="true">&gt;_</span>
+      <span class="brand-txt">pavan<span class="dim">.adapa</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Sections">
+      <a href="#work">work</a>
+      <a href="#experience">experience</a>
+      <a href="#skills">skills</a>
+      <a href="#research">research</a>
+      <a href="#contact">contact</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <button class="kbtn" id="palette-open" aria-label="Open menu and command palette">
+        <span class="k-desk"><span aria-hidden="true">⌘</span>K</span>
+        <span class="k-mob" aria-hidden="true">menu</span>
+      </button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Switch to light theme" title="Toggle theme">
+        <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-13.2a1 1 0 0 1-1-1V1.5a1 1 0 1 1 2 0v1.3a1 1 0 0 1-1 1Zm0 19.7a1 1 0 0 1-1-1v-1.3a1 1 0 1 1 2 0v1.3a1 1 0 0 1-1 1ZM22.5 13h-1.3a1 1 0 1 1 0-2h1.3a1 1 0 1 1 0 2Zm-19.7 0H1.5a1 1 0 1 1 0-2h1.3a1 1 0 1 1 0 2Zm16.4-7.3a1 1 0 0 1-.7-1.7l.9-.9a1 1 0 1 1 1.4 1.4l-.9.9a1 1 0 0 1-.7.3ZM5.2 20.1a1 1 0 0 1-.7-1.7l.9-.9a1 1 0 0 1 1.4 1.4l-.9.9a1 1 0 0 1-.7.3Zm14 .3a1 1 0 0 1-.7-.3l-.9-.9a1 1 0 0 1 1.4-1.4l.9.9a1 1 0 0 1-.7 1.7ZM4.3 5.4a1 1 0 0 1-.7-.3l-.9-.9a1 1 0 0 1 1.4-1.4l.9.9a1 1 0 0 1-.7 1.7Z"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="scroll-rail"><span id="scroll-fill"></span></div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════════ hero ══════════════════ -->
+<section class="hero" id="top">
+  <div class="wrap">
+
+    <div class="term" role="presentation">
+      <span class="term-user">pavan</span><span class="dim">@</span><span class="term-host">portfolio</span><span class="dim">:~$</span>
+      <span class="term-cmd">whoami</span>
+    </div>
+
+    <h1 class="hero-name">Pavan&nbsp;Dharma<br>Adapa</h1>
+
+    <p class="hero-role">
+      <span class="caret" aria-hidden="true">▸</span>
+      <span id="typed" class="typed"></span><span class="cursor" aria-hidden="true"></span>
+      <span class="sr-only" data-track="epic">Healthcare Data Analyst — Epic Clarity, Cogito &amp; Caboodle reporting</span>
+      <span class="sr-only" data-track="analytics">Data Analyst — SQL, Python, Tableau &amp; Power BI</span>
+    </p>
+
+    <p class="hero-blurb" data-track="epic">
+      I build the unglamorous layer that clinical dashboards stand on — ETL pipelines, star-schema
+      warehouses, and validated data models — then turn them into reports that operations leaders
+      actually make decisions from. M.S. in Computer Science &amp; Engineering, grounded in EHR/EMR
+      concepts, HL7, ICD-10/CPT, and HIPAA.
+    </p>
+    <p class="hero-blurb" data-track="analytics">
+      I take messy, multi-source data and turn it into something a stakeholder can act on before the
+      meeting ends — ETL pipelines, exploratory analysis, predictive models, and dashboards that answer
+      the question actually being asked. M.S. in Computer Science &amp; Engineering.
+    </p>
+
+    <!-- track switcher -->
+    <div class="switch-block">
+      <p class="switch-label">
+        <span class="dim">$</span> profile <span class="flag">--role</span>
+        <span class="switch-hint">— I&nbsp;apply across two tracks. Pick the one you&nbsp;hire&nbsp;for:</span>
+      </p>
+      <div class="switch" role="tablist" aria-label="Choose profile track">
+        <button role="tab" class="switch-opt" data-set-track="epic" aria-selected="false">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="switch-t">healthcare&nbsp;/&nbsp;epic</span>
+          <span class="switch-s">Clarity · Cogito · revenue cycle</span>
+        </button>
+        <button role="tab" class="switch-opt" data-set-track="analytics" aria-selected="false">
+          <span class="dot" aria-hidden="true"></span>
+          <span class="switch-t">data&nbsp;analytics</span>
+          <span class="switch-s">SQL · BI · predictive modeling</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- metrics -->
+    <ul class="metrics" aria-label="Selected impact metrics">
+      <li><b data-count="900">0</b><span class="unit">K+</span><small>records analyzed</small></li>
+      <li><b data-count="95">0</b><span class="unit">%</span><small>processing time cut</small></li>
+      <li><b data-count="87">0</b><span class="unit">%</span><small>forecast accuracy</small></li>
+      <li data-track="epic"><b data-count="27">0</b><span class="unit">K+</span><small>synthetic clinical records modeled</small></li>
+      <li data-track="analytics"><b data-count="50">0</b><span class="unit">%</span><small>manual analysis removed</small></li>
+    </ul>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="mailto:adapapavandharma@gmail.com">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm2.4.5 7.6 5.3 7.6-5.3H4.4Z"/></svg>
+        Get in touch
+      </a>
+      <a class="btn" id="resume-link" href="resume/Pavan_Dharma_Adapa_Healthcare_Data_Analyst.pdf" download>
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3 1.4 1.4-5.7 5.7-5.7-5.7 1.4-1.4L11 13.6V4a1 1 0 0 1 1-1ZM4 19h16v2H4v-2Z"/></svg>
+        <span id="resume-label">Résumé (PDF)</span>
+      </a>
+      <a class="btn" href="https://github.com/adapapavandharma" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/adapapavandharma" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ work ══════════════════ -->
+<section class="sect" id="work">
+  <div class="wrap">
+    <h2 class="sect-h"><span class="dim">$</span> ls <span class="flag">./projects</span></h2>
+    <p class="sect-note" data-track="epic">
+      Built on synthetic, non-PHI data modeled on Epic&rsquo;s publicly documented Clarity and Caboodle
+      schemas and reporting patterns.
+    </p>
+    <p class="sect-note" data-track="analytics">
+      End-to-end: raw sources → ETL → model → dashboard → the recommendation someone can act on.
+    </p>
+
+    <div class="cards">
+
+      <article class="card" data-track="both">
+        <header class="card-h">
+          <h3>ED Throughput &amp; Patient Flow Analytics</h3>
+          <span class="card-kind">Clinical Operations</span>
+        </header>
+        <p class="card-lead">
+          Replicated a Clarity-style schema (<code>ENCOUNTER</code>, <code>ORDER_PROC</code>,
+          <code>PAT_DIAGNOSIS</code>) over 5,000 synthetic ED visits to find where patient flow breaks down.
+        </p>
+        <ul class="card-pts">
+          <li>Surfaced a <b>4–6&nbsp;PM peak</b> where median door-to-bed time nearly doubled (≈20 → 39&nbsp;min) and left-without-being-seen rose 5.1% → 6.6% — the staffing case for peak-hour coverage.</li>
+          <li>Engineered a dimensional warehouse and Python/SQL ETL with derived flow metrics (door-to-bed, bed-to-provider, length of stay) feeding Tableau and Power BI dashboards.</li>
+          <li>Computed KPIs across 10 diagnosis groups (LWBS 5.5%, admit rate 24%, 30-day readmission 15.5%) to flag the 5 highest-readmission diagnoses for care-management follow-up.</li>
+        </ul>
+        <ul class="tags"><li>SQL</li><li>Python</li><li>Dimensional modeling</li><li>Tableau</li><li>Power BI</li></ul>
+      </article>
+
+      <article class="card" data-track="both">
+        <header class="card-h">
+          <h3>30-Day Readmission Risk Model &amp; Patient Registry</h3>
+          <span class="card-kind">Population Health</span>
+        </header>
+        <p class="card-lead">
+          A logistic-regression readmission model on a 2,000-patient synthetic registry, wired to a daily
+          scoring pipeline so care management gets a ranked list, not a report.
+        </p>
+        <ul class="card-pts">
+          <li><b>0.73 AUC</b>; captured ~40% of actual readmissions inside the top 20% of flagged patients — <b>2× lift</b> over baseline.</li>
+          <li>Automated daily SQL + Python scoring (feature standardization, low/medium/high risk binning) feeding a Tableau &ldquo;Daily Risk Board&rdquo; for 48-hour pre-discharge intervention.</li>
+          <li>Reusable patient registry and validation checks mirroring Clarity/Caboodle reporting patterns for reproducible population-health analytics.</li>
+        </ul>
+        <ul class="tags"><li>Logistic regression</li><li>SQL</li><li>Python</li><li>Tableau</li><li>Risk stratification</li></ul>
+      </article>
+
+      <article class="card" data-track="epic">
+        <header class="card-h">
+          <h3>Revenue Cycle &amp; Denials Analytics</h3>
+          <span class="card-kind">Resolute / Claims</span>
+        </header>
+        <p class="card-lead">
+          8,000+ synthetic claims modeled on Epic Resolute Professional &amp; Hospital Billing, analyzed to
+          find where the money actually leaks.
+        </p>
+        <ul class="card-pts">
+          <li>Identified the <b>top 5 denial reason codes</b> (CARC/RARC) driving ~60% of denied charges, prioritizing rework on the highest-recovery accounts.</li>
+          <li>Built a SQL/Python ETL transforming charge, transaction, and remittance (835/EOB-style) data into a dimensional revenue-cycle data mart.</li>
+          <li>Dashboard tracking clean claim rate, days in A/R, denial rate, and net collection rate by payer and service area — surfacing one payer segment with elevated denials.</li>
+        </ul>
+        <ul class="tags"><li>Revenue cycle</li><li>835/EOB</li><li>CARC/RARC</li><li>Data mart</li><li>Power BI</li></ul>
+      </article>
+
+      <article class="card" data-track="epic">
+        <header class="card-h">
+          <h3>Ambulatory Access &amp; Provider Productivity</h3>
+          <span class="card-kind">EpicCare Ambulatory</span>
+        </header>
+        <p class="card-lead">
+          12,000+ synthetic ambulatory encounters across 15 simulated clinics, measured on the access
+          metrics clinic operations leaders are held to.
+        </p>
+        <ul class="card-pts">
+          <li>Computed third-next-available appointment, an <b>18% no-show rate</b>, and provider utilization across all 15 clinics.</li>
+          <li>Built chronic-disease registries (diabetes, hypertension) with care-gap flags supporting outreach and quality-measure tracking.</li>
+          <li>Provider- and clinic-level dashboards (visit volume, panel size, wRVU productivity) enabling schedule rebalancing against access bottlenecks.</li>
+        </ul>
+        <ul class="tags"><li>Access KPIs</li><li>Patient registries</li><li>wRVU</li><li>Tableau</li><li>Power BI</li></ul>
+      </article>
+
+      <article class="card" data-track="analytics">
+        <header class="card-h">
+          <h3>Sales &amp; Marketing KPI Dashboard</h3>
+          <span class="card-kind">Business Intelligence</span>
+        </header>
+        <p class="card-lead">
+          Public sales and marketing datasets consolidated into one centralized model, then turned into the
+          performance view a commercial team checks on a Monday morning.
+        </p>
+        <ul class="card-pts">
+          <li>Combined multi-source data via SQL and ETL, standardizing revenue, opportunities, and campaign spend for consistent cross-channel reporting.</li>
+          <li>Interactive Tableau and Power BI dashboards covering sales growth, sales vs. target, conversion rate by funnel stage, and product-level revenue trends.</li>
+          <li>EDA, A/B-style comparisons, and root cause analysis to isolate underperforming campaigns and regions — packaged as plain-language recommendations.</li>
+        </ul>
+        <ul class="tags"><li>SQL</li><li>ETL</li><li>Tableau</li><li>Power BI</li><li>Root cause analysis</li></ul>
+      </article>
+
+      <article class="card" data-track="both">
+        <header class="card-h">
+          <h3>Multimodal LLM Evaluation — LLaVA-1.5</h3>
+          <span class="card-kind">Analytics &amp; Experimentation</span>
+        </header>
+        <p class="card-lead">
+          Evaluation pipelines measuring cross-lingual performance of a multimodal LLM — an experimentation
+          problem as much as an ML one.
+        </p>
+        <ul class="card-pts">
+          <li>Applied NLP techniques, data-contamination auditing, and statistical analysis to compare model outputs across multiple benchmarks.</li>
+          <li>Aggregated experiment metrics in Python and SQL into clean analytical datasets, enabling systematic comparison across models, hyperparameters, and prompts.</li>
+          <li>Presented to academic stakeholders through data storytelling and KPI-driven summaries, translating technical results for non-technical audiences.</li>
+        </ul>
+        <ul class="tags"><li>Python</li><li>SQL</li><li>NLP</li><li>Benchmarking</li><li>Statistical analysis</li></ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ experience ══════════════════ -->
+<section class="sect alt" id="experience">
+  <div class="wrap">
+    <h2 class="sect-h"><span class="dim">$</span> cat <span class="flag">experience.log</span></h2>
+
+    <ol class="timeline">
+
+      <li class="tl-item" data-track="both">
+        <div class="tl-when">Sep 2025 – May 2026</div>
+        <div class="tl-body">
+          <h3>Graduate Teaching Assistant &amp; Analytics Mentor</h3>
+          <p class="tl-org">Mississippi State University — Starkville, MS</p>
+          <ul>
+            <li data-track="epic">Trained and supported <b>100+ students</b> across 6 courses on data cleaning, transformation, visualization, and dashboard-based reporting in SQL, Python (Pandas, Matplotlib), and Advanced Excel.</li>
+            <li data-track="analytics">Led lab sessions in Python (Pandas, Matplotlib) and R (ggplot2, dplyr) across 6 data science courses, demonstrating how to clean, transform, and visualize datasets and communicate insight to non-technical audiences.</li>
+            <li>Tracked KPIs — completion rates, grade distributions, retention — in SQL, Python, and Advanced Excel so instructors could identify at-risk students early and shorten intervention turnaround.</li>
+            <li data-track="epic">Built and led hands-on workshops on IoT sensor data for the SmartCT smart-city initiative, producing traffic, energy, and environmental KPI dashboards while reinforcing data-quality practice.</li>
+            <li data-track="analytics">Designed and evaluated coding assignments simulating real analyst workflows — preprocessing, feature engineering, EDA, model evaluation — improving project completion speed by 25%.</li>
+            <li>Created reusable training materials and documentation that improved task-completion speed by <b>25%</b> and standardized analytics practice across cohorts.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="tl-item" data-track="both">
+        <div class="tl-when">Aug 2024 – Aug 2025</div>
+        <div class="tl-body">
+          <h3><span data-track="epic">Graduate Research Analyst — Healthcare Data Analytics</span><span data-track="analytics">Graduate Research Analyst</span></h3>
+          <p class="tl-org">Mississippi State University — Starkville, MS</p>
+          <ul>
+            <li>Designed and automated a production ETL pipeline (Python, Selenium, SQL) to extract, cleanse, and standardize multi-source clinical and surveillance datasets — cutting processing time <b>95%</b>, from several hours to under 10 minutes per dataset.</li>
+            <li>Queried <b>900,000+</b> epidemiological/public-health surveillance records in SQL and Python to surface <b>8 key drivers</b> of disease transmission, delivering data-backed recommendations to non-technical decision-makers.</li>
+            <li data-track="epic">Engineered dimensional / star-schema data models with field-level validation, standardization, and governance across multiple source systems for reproducible, enterprise-scale reporting.</li>
+            <li>Developed and evaluated predictive models (Gaussian Process Regression, Random Forest, XGBoost<span data-track="epic">, logistic regression</span>) reaching <b>87% accuracy</b>, establishing baseline KPIs to monitor model and data quality over time.</li>
+            <li>Automated feature-engineering and data-cleansing routines, resolving <b>35%</b> of dataset inconsistencies and reducing manual analysis time <b>50%</b>.</li>
+            <li data-track="analytics">Simulated 10,000+ outbreak scenarios using statistical analysis and hypothesis testing, contributing the results to an interdisciplinary research manuscript.</li>
+            <li>Delivered presentation-ready Tableau and Power BI dashboards and correlation analyses that turned complex findings into decisions leadership could make.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="tl-item" data-track="analytics">
+        <div class="tl-when">May 2023 – Dec 2023</div>
+        <div class="tl-body">
+          <h3>Marketing Data Analyst Intern</h3>
+          <p class="tl-org">Viral Fission</p>
+          <ul>
+            <li>Built digital marketing analytics and reporting systems tracking audience engagement, funnel performance, and campaign ROI for youth-focused brand campaigns — clients including Coca-Cola, ITC, and Mahindra.</li>
+            <li>Automated Power BI and GA4 dashboards that cut manual reporting time <b>50%</b> and enabled real-time monitoring of reach, engagement rate, click-through rate, and conversion KPIs.</li>
+            <li>Applied SEO optimization, A/B testing, and UX insight from GA4 and social analytics to refine content and posting strategy, contributing to a <b>25% increase</b> in key audience-interaction metrics.</li>
+            <li>Worked with brand, creative, and marketing leadership to turn event-tracking data into recommendations on content, channel mix, and campaign timing.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="tl-item" data-track="analytics">
+        <div class="tl-when">Aug 2022 – Dec 2022</div>
+        <div class="tl-body">
+          <h3>Data Analytics Intern</h3>
+          <p class="tl-org">InfraBIM Techno Solutions</p>
+          <ul>
+            <li>Led analytics and reporting-automation work on engineering and operations data using Power BI, SQL, and Google Colab, improving visibility into project performance and stakeholder KPIs.</li>
+            <li>Developed KPI dashboards, ETL pipelines, and automated reporting that reduced manual reporting effort ~<b>30%</b>.</li>
+            <li>Ran EDA to identify patterns, trends, and recurring data-quality issues, feeding findings back into cleaning steps and feature engineering.</li>
+            <li>Evaluated model performance across experiments, summarizing accuracy and error metrics in analysis-ready tables to guide model selection.</li>
+          </ul>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════ skills ══════════════════ -->
+<section class="sect" id="skills">
+  <div class="wrap">
+    <h2 class="sect-h"><span class="dim">$</span> stack <span class="flag">--list</span></h2>
+
+    <div class="skills">
+
+      <div class="skill-grp" data-track="epic">
+        <h3>Epic Ecosystem &amp; Reporting</h3>
+        <p class="grp-note">Self-study / certification prep — not yet certified.</p>
+        <ul class="chips">
+          <li>Clarity data model</li><li>ENCOUNTER</li><li>PAT_ENC</li><li>ORDER_PROC</li><li>RESULT</li>
+          <li>PAT_DIAGNOSIS</li><li>Cogito</li><li>Caboodle</li><li>Reporting Workbench</li>
+          <li>SlicerDicer</li><li>Radar dashboards</li><li>Crystal Reports</li><li>SSRS</li>
+          <li>SAP BusinessObjects</li><li>Epic Sphinx prep</li>
+        </ul>
+      </div>
+
+      <div class="skill-grp" data-track="epic">
+        <h3>Healthcare Data &amp; Standards</h3>
+        <ul class="chips">
+          <li>EHR / EMR</li><li>Clinical &amp; claims data</li><li>Revenue cycle</li><li>Denials &amp; A/R</li>
+          <li>Charge capture</li><li>Population health</li><li>Patient registries</li><li>HL7 v2</li>
+          <li>ICD-10 / CPT</li><li>HIPAA</li>
+        </ul>
+      </div>
+
+      <div class="skill-grp">
+        <h3>Programming &amp; Querying</h3>
+        <ul class="chips">
+          <li>SQL — joins, CTEs, window functions, query optimization</li><li>Python</li><li>Pandas</li>
+          <li>NumPy</li><li>PostgreSQL</li><li>MySQL</li><li>Advanced Excel</li>
+          <li data-track="analytics">R — ggplot2, dplyr</li>
+        </ul>
+      </div>
+
+      <div class="skill-grp">
+        <h3>Data Engineering &amp; Governance</h3>
+        <ul class="chips">
+          <li>ETL / ELT</li><li>Data warehousing</li><li>Dimensional / star-schema modeling</li>
+          <li>Data validation</li><li>Cleansing &amp; standardization</li><li>Data quality</li>
+          <li>Data governance</li><li>Feature engineering</li>
+        </ul>
+      </div>
+
+      <div class="skill-grp">
+        <h3>BI &amp; Visualization</h3>
+        <ul class="chips">
+          <li>Tableau</li><li>Microsoft Power BI</li><li>Matplotlib</li><li>Seaborn</li>
+          <li data-track="analytics">Google Data Studio</li><li>KPI reporting</li><li>Executive dashboards</li>
+        </ul>
+      </div>
+
+      <div class="skill-grp">
+        <h3>Analytics &amp; Modeling</h3>
+        <ul class="chips">
+          <li>Hypothesis testing</li><li>EDA</li><li>A/B testing</li><li>Risk stratification</li>
+          <li>Logistic regression</li><li>Random Forest</li><li>XGBoost</li>
+          <li data-track="analytics">Gaussian Process Regression</li><li data-track="analytics">MLP</li>
+          <li>Cross-validation</li><li>Model evaluation</li>
+        </ul>
+      </div>
+
+      <div class="skill-grp">
+        <h3>Tools &amp; Cloud</h3>
+        <ul class="chips">
+          <li>Git</li><li>Linux</li><li>AWS</li><li>Jupyter</li><li>Selenium</li>
+          <li data-track="analytics">NLP</li><li data-track="analytics">LLMs</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ research + education ══════════════════ -->
+<section class="sect alt" id="research">
+  <div class="wrap">
+    <div class="two-col">
+
+      <div>
+        <h2 class="sect-h"><span class="dim">$</span> cat <span class="flag">publications.bib</span></h2>
+
+        <article class="pub">
+          <span class="pub-status">in progress</span>
+          <h3>Computational Tools for Modeling and Predicting Respiratory Disease Spread in Commercial Poultry Production</h3>
+          <p class="pub-authors">Zhang Li, <b>Pavan Dharma Adapa</b>, Sai Harika Gade, Saikanth Ratnavale, Navicky Michael</p>
+          <ul>
+            <li>Designed data-driven forecasting frameworks synthesizing compartmental (SIR/SEIR) and machine-learning models to predict respiratory disease transmission across large populations.</li>
+            <li>Assessed advanced statistical methods (Random Forest, deep learning) for identifying risk factors and detecting anomalies in remote sensor and surveillance data.</li>
+          </ul>
+        </article>
+
+        <article class="pub">
+          <span class="pub-status">in progress</span>
+          <h3>Predictive Modeling of Respiratory Disease Outbreaks in Poultry and Bovine Populations using Phylodynamics</h3>
+          <p class="pub-authors">Zhang Li, Sai Harika Gade, Saikanth Ratnavale, Navicky Michael, <b>Pavan Dharma Adapa</b></p>
+          <ul>
+            <li>Designed and implemented the <em>Modeling Approaches</em> component, translating clinical and surveillance requirements into multi-host SIR models and scenario analyses.</li>
+            <li>Integrated pathogen and patient-level metadata to parameterize outbreak simulations, improving forecast accuracy across animal and human populations.</li>
+            <li>Aligned simulation design, data-quality checks, and reporting with healthcare KPIs — incidence rates, risk stratification, intervention impact.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div>
+        <h2 class="sect-h"><span class="dim">$</span> cat <span class="flag">education.txt</span></h2>
+
+        <article class="edu">
+          <div class="edu-when">May 2026</div>
+          <h3>M.S., Computer Science &amp; Engineering</h3>
+          <p class="edu-org">Mississippi State University — Mississippi State, MS</p>
+          <p class="edu-course"><span class="dim">coursework —</span> Advanced Machine Learning, Artificial Intelligence, Algorithms, Design of Parallel Algorithms, Software Engineering, Data Analytics, Data Science Pedagogy, Advanced Cyber Operations</p>
+        </article>
+
+        <article class="edu">
+          <div class="edu-when">May 2024</div>
+          <h3>B.Tech, Computer Science &amp; Engineering</h3>
+          <p class="edu-org">Malla Reddy University — Hyderabad, India</p>
+          <p class="edu-course"><span class="dim">coursework —</span> Data Structures &amp; Algorithms, Database Management Systems, Statistics &amp; Probability, Machine Learning, Operating Systems, Computer Networks, Object-Oriented Programming</p>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ contact ══════════════════ -->
+<section class="sect contact" id="contact">
+  <div class="wrap">
+    <h2 class="sect-h"><span class="dim">$</span> ./contact<span class="flag">.sh</span></h2>
+    <p class="contact-lead" data-track="epic">
+      Open to Healthcare Data Analyst, Clinical Analytics, and Epic reporting roles.
+    </p>
+    <p class="contact-lead" data-track="analytics">
+      Open to Data Analyst, Business Intelligence, and Analytics Engineering roles.
+    </p>
+
+    <ul class="contact-list">
+      <li>
+        <span class="ck">email</span>
+        <a href="mailto:adapapavandharma@gmail.com">adapapavandharma@gmail.com</a>
+        <button class="copy" data-copy="adapapavandharma@gmail.com" aria-label="Copy email address">copy</button>
+      </li>
+      <li>
+        <span class="ck">phone</span>
+        <a href="tel:+16623709614">+1 662-370-9614</a>
+        <button class="copy" data-copy="+16623709614" aria-label="Copy phone number">copy</button>
+      </li>
+      <li><span class="ck">linkedin</span><a href="https://www.linkedin.com/in/adapapavandharma" target="_blank" rel="noopener">in/adapapavandharma ↗</a></li>
+      <li><span class="ck">github</span><a href="https://github.com/adapapavandharma" target="_blank" rel="noopener">@adapapavandharma ↗</a></li>
+      <li><span class="ck">based</span><span>Mississippi, United States</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span class="dim">pavan@portfolio:~$ exit</span>
+    <span class="foot-r dim">Built from scratch — no framework, no tracking. <span id="year"></span></span>
+  </div>
+</footer>
+
+<!-- ══════════════════ command palette ══════════════════ -->
+<div class="palette" id="palette" hidden>
+  <div class="palette-bg" data-palette-close></div>
+  <div class="palette-box" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="palette-in">
+      <span class="dim" aria-hidden="true">&gt;</span>
+      <input id="palette-input" type="text" placeholder="jump to a section, switch track, copy contact…" autocomplete="off" spellcheck="false" aria-label="Command">
+      <kbd>esc</kbd>
+    </div>
+    <ul class="palette-list" id="palette-list" role="listbox" aria-label="Commands"></ul>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
