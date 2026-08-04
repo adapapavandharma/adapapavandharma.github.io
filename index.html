@@ -171,8 +171,10 @@
   <div class="wrap">
     <h2 class="sect-h"><span class="dim">$</span> ls <span class="flag">./projects</span></h2>
     <p class="sect-note" data-track="epic">
-      Built on synthetic, non-PHI data modeled on Epic&rsquo;s publicly documented Clarity and Caboodle
-      schemas and reporting patterns.
+      Built on real public health datasets (CDC/NCHS, CMS) where patient-level data exists, and on
+      synthetic non-PHI data modeled on Epic&rsquo;s publicly documented Clarity and Caboodle schemas
+      where it does not. Each project says which, and no result is reported that its own code
+      does not reproduce.
     </p>
     <p class="sect-note" data-track="analytics">
       End-to-end: raw sources → ETL → model → dashboard → the recommendation someone can act on.
@@ -182,19 +184,24 @@
 
       <article class="card" data-track="both">
         <header class="card-h">
-          <h3>ED Throughput &amp; Patient Flow Analytics</h3>
-          <span class="card-kind">Clinical Operations</span>
+          <h3>Where ED Wait Time Actually Comes From</h3>
+          <span class="card-kind">Clinical Operations · Real CDC data</span>
         </header>
         <p class="card-lead">
-          Replicated a Clarity-style schema (<code>ENCOUNTER</code>, <code>ORDER_PROC</code>,
-          <code>PAT_DIAGNOSIS</code>) over 5,000 synthetic ED visits to find where patient flow breaks down.
+          <b>16,025 real emergency department visits</b> from the CDC/NCHS 2022 national survey,
+          weighted to all <b>155.4M US ED visits</b> that year. Set out to find <em>when</em> the
+          ED is worst; the data said that is the wrong question.
         </p>
         <ul class="card-pts">
-          <li>Surfaced a <b>4–6&nbsp;PM peak</b> where median door-to-bed time nearly doubled (≈20 → 39&nbsp;min) and left-without-being-seen rose 5.1% → 6.6% — the staffing case for peak-hour coverage.</li>
-          <li>Engineered a dimensional warehouse and Python/SQL ETL with derived flow metrics (door-to-bed, bed-to-provider, length of stay) feeding Tableau and Power BI dashboards.</li>
-          <li>Computed KPIs across 10 diagnosis groups (LWBS 5.5%, admit rate 24%, 30-day readmission 15.5%) to flag the 5 highest-readmission diagnoses for care-management follow-up.</li>
+          <li>Between-hospital variation in median door-to-provider time (2–74&nbsp;min) is <b>3.9× larger</b> than between-hour variation (11–22&nbsp;min) — site practice, not the clock, drives the wait.</li>
+          <li>Quantified boarding as the recoverable capacity item: <b>48.6M ED bay-hours lost per year</b> nationally, median 62&nbsp;min but 460&nbsp;min at p90.</li>
+          <li>Implemented the <b>ultimate-cluster variance estimator</b> with Taylor linearisation per CDC guidance — which showed the hypothesised peak-hour effect does <em>not</em> clear α&nbsp;=&nbsp;0.01. Reported as a negative result rather than dropped.</li>
+          <li>Record layout is derived by parsing CDC's 268-page documentation PDF rather than hardcoding byte offsets; weighting self-validates against CDC's published national total or the build refuses to run.</li>
         </ul>
-        <ul class="tags"><li>SQL</li><li>Python</li><li>Dimensional modeling</li><li>Tableau</li><li>Power BI</li></ul>
+        <ul class="tags"><li>Python</li><li>SQL</li><li>Survey statistics</li><li>SQLite star schema</li><li>Matplotlib</li></ul>
+        <p class="card-links">
+          <a href="https://github.com/adapapavandharma/ed-throughput-analytics" target="_blank" rel="noopener">View code on GitHub ↗</a>
+        </p>
       </article>
 
       <article class="card" data-track="both">

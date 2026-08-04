@@ -421,6 +421,16 @@ em { font-style: italic; color: var(--text-2); }
   color: var(--accent); font-family: var(--mono); font-size: 11px;
 }
 
+/* repo link sits below the tags and pins to the bottom of the card */
+.card-links {
+  margin: 14px 0 0;
+  padding-top: 13px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+.card-links a { font-weight: 600; }
+.card:has(.card-links) .tags { margin-bottom: 0; }
+
 .tags { list-style: none; margin: auto 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .tags li {
   font-size: 11.5px; color: var(--muted);
