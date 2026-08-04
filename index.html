@@ -226,21 +226,26 @@
         </p>
       </article>
 
-      <article class="card" data-track="epic">
+      <article class="card" data-track="both">
         <header class="card-h">
-          <h3>Revenue Cycle &amp; Denials Analytics</h3>
-          <span class="card-kind">Resolute / Claims</span>
+          <h3>Claims Denials &amp; Appeals — Where the Recoverable Money Is</h3>
+          <span class="card-kind">Revenue Cycle · Real CMS data</span>
         </header>
         <p class="card-lead">
-          8,000+ synthetic claims modeled on Epic Resolute Professional &amp; Hospital Billing, analyzed to
-          find where the money actually leaks.
+          Three years of CMS Transparency in Coverage filings — <b>15,545 plan-years</b>,
+          624 issuer-years, <b>126.9 million denied claims</b> across every Qualified Health Plan
+          on the federal Marketplace.
         </p>
         <ul class="card-pts">
-          <li>Identified the <b>top 5 denial reason codes</b> (CARC/RARC) driving ~60% of denied charges, prioritizing rework on the highest-recovery accounts.</li>
-          <li>Built a SQL/Python ETL transforming charge, transaction, and remittance (835/EOB-style) data into a dimensional revenue-cycle data mart.</li>
-          <li>Dashboard tracking clean claim rate, days in A/R, denial rate, and net collection rate by payer and service area — surfacing one payer segment with elevated denials.</li>
+          <li>Of 126.9M denials, <b>0.168% were ever appealed</b> — fewer than 2 in 1,000 — and <b>40.1% of appeals were overturned</b>. The binding constraint on recovery is capacity to file, not merit.</li>
+          <li>The payer-reported denial taxonomy is unusable for root-cause work: <b>&ldquo;Other&rdquo; is 71.7%</b> of categorised denials and growing yearly, so triage has to be built from provider-side CARC/RARC detail instead.</li>
+          <li>Denial rate is an organisational property, not a market one — <b>6.0% at p10 to 48.3% max</b> across issuers, with the worst clustered in one parent&rsquo;s brands and several moving +12 to +16pp in a single year.</li>
+          <li>Handled CMS suppression correctly: <code>**</code> means <em>withheld because the cell was small</em>, which is missing-not-at-random — averaging the survivors biases every aggregate upward.</li>
         </ul>
-        <ul class="tags"><li>Revenue cycle</li><li>835/EOB</li><li>CARC/RARC</li><li>Data mart</li><li>Power BI</li></ul>
+        <ul class="tags"><li>SQL</li><li>Window functions</li><li>Panel data</li><li>Two-grain fact design</li><li>Python</li></ul>
+        <p class="card-links">
+          <a href="https://github.com/adapapavandharma/denials-analytics" target="_blank" rel="noopener">View code on GitHub ↗</a>
+        </p>
       </article>
 
       <article class="card" data-track="epic">
