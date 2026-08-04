@@ -206,19 +206,24 @@
 
       <article class="card" data-track="both">
         <header class="card-h">
-          <h3>30-Day Readmission Risk Model &amp; Patient Registry</h3>
-          <span class="card-kind">Population Health</span>
+          <h3>30-Day Readmission Risk — An Honest Evaluation</h3>
+          <span class="card-kind">Population Health · Real patient data</span>
         </header>
         <p class="card-lead">
-          A logistic-regression readmission model on a 2,000-patient synthetic registry, wired to a daily
-          scoring pipeline so care management gets a ranked list, not a report.
+          <b>99,343 real inpatient encounters</b> across 130 US hospitals with a genuine readmission
+          label. The model reaches <b>AUC 0.664</b> — and the whole point is that AUC is the wrong
+          number to judge it on.
         </p>
         <ul class="card-pts">
-          <li><b>0.73 AUC</b>; captured ~40% of actual readmissions inside the top 20% of flagged patients — <b>2× lift</b> over baseline.</li>
-          <li>Automated daily SQL + Python scoring (feature standardization, low/medium/high risk binning) feeding a Tableau &ldquo;Daily Risk Board&rdquo; for 48-hour pre-discharge intervention.</li>
-          <li>Reusable patient registry and validation checks mirroring Clarity/Caboodle reporting patterns for reproducible population-health analytics.</li>
+          <li>Working the top 20% of discharges catches <b>37.7% of all readmissions</b> at <b>1.89× enrichment</b>, number-needed-to-screen 4.8 — a capacity-derived risk board, back-tested, predicted vs observed agreeing within a point in every tier.</li>
+          <li>Benchmarked the model against a one-variable rule a nurse can read off the chart: prior inpatient count already gets 32.2%. Gradient boosting buys <b>+5.5pp</b> — real, and far smaller than an AUC comparison implies.</li>
+          <li>Showed <code>class_weight='balanced'</code> destroys calibration — mean predicted risk <b>46% against an observed 11%</b>. Ranking is unaffected, so an AUC-only evaluation never notices.</li>
+          <li>Measured patient-level leakage rather than assuming it: 23% of patients recur, but grouping the split moves AUC by only <b>+0.002</b>. Grouped split kept because it is correct; inflation reported because it was tested.</li>
         </ul>
-        <ul class="tags"><li>Logistic regression</li><li>SQL</li><li>Python</li><li>Tableau</li><li>Risk stratification</li></ul>
+        <ul class="tags"><li>scikit-learn</li><li>Gradient boosting</li><li>Calibration</li><li>SQL</li><li>Decision curve analysis</li></ul>
+        <p class="card-links">
+          <a href="https://github.com/adapapavandharma/readmission-risk" target="_blank" rel="noopener">View code on GitHub ↗</a>
+        </p>
       </article>
 
       <article class="card" data-track="epic">
