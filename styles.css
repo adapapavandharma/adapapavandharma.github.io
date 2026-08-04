@@ -659,3 +659,6 @@ em { font-style: italic; color: var(--text-2); }
   a { color: #000; text-decoration: underline; }
   .card:hover, .btn:hover { transform: none; }
 }
+
+/* projects without a repo say so, quietly */
+.card-note { color: var(--muted); font-size: 12.5px; font-style: italic; }

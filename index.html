@@ -250,36 +250,46 @@
 
       <article class="card" data-track="epic">
         <header class="card-h">
-          <h3>Ambulatory Access &amp; Provider Productivity</h3>
-          <span class="card-kind">EpicCare Ambulatory</span>
+          <h3>Clinical Quality Measures — A Declarative Engine</h3>
+          <span class="card-kind">Population Health · HEDIS / eCQM</span>
         </header>
         <p class="card-lead">
-          12,000+ synthetic ambulatory encounters across 15 simulated clinics, measured on the access
-          metrics clinic operations leaders are held to.
+          HEDIS and CMS eCQM measures over a <b>13,810-patient EHR</b> — 820,993 encounters,
+          <b>10.8M observations</b>. Measures are YAML specs, not code, so an annual steward
+          update is a diff a clinical analyst can sign off rather than a code change.
         </p>
         <ul class="card-pts">
-          <li>Computed third-next-available appointment, an <b>18% no-show rate</b>, and provider utilization across all 15 clinics.</li>
-          <li>Built chronic-disease registries (diabetes, hypertension) with care-gap flags supporting outreach and quality-measure tracking.</li>
-          <li>Provider- and clinic-level dashboards (visit volume, panel size, wRVU productivity) enabling schedule rebalancing against access bottlenecks.</li>
+          <li>CMS122 scores 17.3% poor control — but decomposing the numerator shows <b>1 patient failed on a recorded result and 203 were never tested</b>. That is a testing gap, not a control problem, and the two need different interventions.</li>
+          <li>Stratification exposes what the average hides: blood pressure control is <b>57% at ages 18–44 vs 89% at 75+</b>. A 66.9% aggregate conceals a 32-point gap.</li>
+          <li>Guardrails against silent failure — value sets that match no data raise instead of returning 0/0, and every threshold measure reports whether the data can even reach it.</li>
+          <li>Deliverable is the care-gap list: 4,439 gaps across 3,454 patients, <b>915 with two or more</b> — the outreach list worth building first.</li>
         </ul>
-        <ul class="tags"><li>Access KPIs</li><li>Patient registries</li><li>wRVU</li><li>Tableau</li><li>Power BI</li></ul>
+        <ul class="tags"><li>SNOMED CT</li><li>LOINC</li><li>SQL</li><li>Synthea</li><li>Python</li></ul>
+        <p class="card-links">
+          <a href="https://github.com/adapapavandharma/clinical-quality-measures" target="_blank" rel="noopener">View code on GitHub ↗</a>
+        </p>
       </article>
 
       <article class="card" data-track="analytics">
         <header class="card-h">
-          <h3>Sales &amp; Marketing KPI Dashboard</h3>
-          <span class="card-kind">Business Intelligence</span>
+          <h3>Experimentation Toolkit — What Goes Wrong in A/B Tests</h3>
+          <span class="card-kind">Experimentation · Causal inference</span>
         </header>
         <p class="card-lead">
-          Public sales and marketing datasets consolidated into one centralized model, then turned into the
-          performance view a commercial team checks on a Monday morning.
+          Five failure modes that quietly break online experiments, each measured against
+          <b>known ground truth</b> rather than asserted. Every claim is a measured rejection
+          rate or bias — change a parameter and watch the conclusion move.
         </p>
         <ul class="card-pts">
-          <li>Combined multi-source data via SQL and ETL, standardizing revenue, opportunities, and campaign spend for consistent cross-channel reporting.</li>
-          <li>Interactive Tableau and Power BI dashboards covering sales growth, sales vs. target, conversion rate by funnel stage, and product-level revenue trends.</li>
-          <li>EDA, A/B-style comparisons, and root cause analysis to isolate underperforming campaigns and regions — packaged as plain-language recommendations.</li>
+          <li>Peeking at a null experiment 10 times drives the false positive rate to <b>18.5%</b> against a nominal 5%. Implemented O&rsquo;Brien&ndash;Fleming and always-valid mSPRT bounds, and quantified what each costs in power.</li>
+          <li>CUPED variance reduction matches the ρ² prediction to a tenth of a point; at ρ&nbsp;=&nbsp;0.7 it is <b>worth 1.96× the traffic, free</b>. Unbiasedness verified over 300 replications.</li>
+          <li>Built an experiment where treatment wins in <em>every</em> segment and loses 41% overall — and the global sample-ratio check <b>passes cleanly</b> because the skew cancels in the total. Run SRM per segment.</li>
+          <li>Closed-form sample sizes are validated by simulation: request 80% power, measure 80.1%. A formula never checked against an empirical rejection rate is not a result.</li>
         </ul>
-        <ul class="tags"><li>SQL</li><li>ETL</li><li>Tableau</li><li>Power BI</li><li>Root cause analysis</li></ul>
+        <ul class="tags"><li>SciPy</li><li>Sequential testing</li><li>CUPED</li><li>Power analysis</li><li>NumPy</li></ul>
+        <p class="card-links">
+          <a href="https://github.com/adapapavandharma/experimentation-toolkit" target="_blank" rel="noopener">View code on GitHub ↗</a>
+        </p>
       </article>
 
       <article class="card" data-track="both">
@@ -297,6 +307,10 @@
           <li>Presented to academic stakeholders through data storytelling and KPI-driven summaries, translating technical results for non-technical audiences.</li>
         </ul>
         <ul class="tags"><li>Python</li><li>SQL</li><li>NLP</li><li>Benchmarking</li><li>Statistical analysis</li></ul>
+        <p class="card-links card-note">
+          Academic research — evaluation artefacts are not mine to publish, so there is no repo
+          for this one.
+        </p>
       </article>
 
     </div>
