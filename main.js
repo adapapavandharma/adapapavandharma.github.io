@@ -30,7 +30,7 @@
       typed: [
         'Healthcare Data Analyst',
         'Epic Clarity · Cogito · Caboodle reporting',
-        'ETL pipelines & dimensional warehouses',
+        'Real CDC & CMS data · design-correct inference',
         'M.S. Computer Science & Engineering'
       ],
       resumeHref: 'resume/Pavan_Dharma_Adapa_Healthcare_Data_Analyst.pdf',
@@ -41,7 +41,7 @@
       typed: [
         'Data Analyst',
         'SQL · Python · Tableau · Power BI',
-        'ETL pipelines & predictive modeling',
+        'Experimentation · calibration · survey statistics',
         'M.S. Computer Science & Engineering'
       ],
       resumeHref: 'resume/Pavan_Dharma_Adapa_Data_Analyst.pdf',

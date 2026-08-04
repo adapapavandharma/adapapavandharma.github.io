@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pavan Dharma Adapa — Healthcare &amp; Data Analytics</title>
-<meta name="description" content="Pavan Dharma Adapa — Healthcare Data Analyst and Data Analyst, available now. M.S. Computer Science &amp; Engineering (2026). SQL, Python, Tableau, Power BI, ETL pipelines, dimensional modeling, predictive modeling.">
+<meta name="description" content="Pavan Dharma Adapa — Healthcare Data Analyst and Data Analyst, available now. M.S. Computer Science &amp; Engineering (2026). Five open-source analytics projects on real CDC and CMS data: survey-weighted ED throughput, readmission risk, claims denials, clinical quality measures, and A/B test methodology. SQL, Python, Tableau, Power BI.">
 <meta name="author" content="Pavan Dharma Adapa">
 <link rel="canonical" href="https://adapapavandharma.github.io/">
 
 <!-- Open Graph / LinkedIn + Twitter link previews -->
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Pavan Dharma Adapa — Healthcare &amp; Data Analytics">
-<meta property="og:description" content="Available now · M.S. CSE 2026. ETL pipelines, dimensional data warehouses, and clinical-operations dashboards. 900K+ records analyzed, 95% processing time cut, 87% forecast accuracy.">
+<meta property="og:description" content="Available now · M.S. CSE 2026. Five open-source projects on real CDC and CMS data — 16,025 survey-weighted ED visits, 99,343 inpatient encounters, 126.9M denied claims. Every figure reproduced by the code.">
 <meta property="og:url" content="https://adapapavandharma.github.io/">
 <meta property="og:image" content="https://adapapavandharma.github.io/assets/og.png">
 <meta property="profile:first_name" content="Pavan Dharma">
@@ -111,15 +111,17 @@
     </p>
 
     <p class="hero-blurb" data-track="epic">
-      I build the unglamorous layer that clinical dashboards stand on — ETL pipelines, star-schema
-      warehouses, and validated data models — then turn them into reports that operations leaders
-      actually make decisions from. M.S. in Computer Science &amp; Engineering, grounded in EHR/EMR
-      concepts, HL7, ICD-10/CPT, and HIPAA.
+      I build the unglamorous layer clinical reporting stands on — ETL pipelines, star-schema
+      warehouses, validated data models — then turn them into findings an operations leader can act
+      on. The work below runs on <b>real public health data</b>: CDC emergency department microdata,
+      CMS claims-denial filings, multi-hospital inpatient encounters. Every figure is reproduced by
+      the code in the repo, including the ones that came out inconvenient.
     </p>
     <p class="hero-blurb" data-track="analytics">
-      I take messy, multi-source data and turn it into something a stakeholder can act on before the
-      meeting ends — ETL pipelines, exploratory analysis, predictive models, and dashboards that answer
-      the question actually being asked. M.S. in Computer Science &amp; Engineering.
+      I turn messy, multi-source data into something a stakeholder can act on — and I check whether
+      the answer holds. The work below runs on <b>real public datasets at national scale</b>, with
+      design-correct survey inference, calibrated models, and experiment analysis that accounts for
+      how tests actually get run. Every figure is reproduced by the code in the repo.
     </p>
 
     <!-- track switcher -->
@@ -147,7 +149,7 @@
       <li><b data-count="900">0</b><span class="unit">K+</span><small>records analyzed</small></li>
       <li><b data-count="95">0</b><span class="unit">%</span><small>processing time cut</small></li>
       <li><b data-count="87">0</b><span class="unit">%</span><small>forecast accuracy</small></li>
-      <li data-track="epic"><b data-count="27">0</b><span class="unit">K+</span><small>synthetic clinical records modeled</small></li>
+      <li data-track="epic"><b data-count="127">0</b><span class="unit">M</span><small>real denied claims analysed</small></li>
       <li data-track="analytics"><b data-count="50">0</b><span class="unit">%</span><small>manual analysis removed</small></li>
     </ul>
 
@@ -410,9 +412,9 @@
       <div class="skill-grp" data-track="epic">
         <h3>Healthcare Data &amp; Standards</h3>
         <ul class="chips">
-          <li>EHR / EMR</li><li>Clinical &amp; claims data</li><li>Revenue cycle</li><li>Denials &amp; A/R</li>
+          <li>EHR / EMR</li><li>Clinical &amp; claims data</li><li>Revenue cycle</li><li>Denials &amp; appeals</li>
           <li>Charge capture</li><li>Population health</li><li>Patient registries</li><li>HL7 v2</li>
-          <li>ICD-10 / CPT</li><li>HIPAA</li>
+          <li>ICD-10 / CPT</li><li>SNOMED CT</li><li>LOINC</li><li>HEDIS</li><li>CMS eCQM</li><li>HIPAA</li>
         </ul>
       </div>
 
@@ -445,10 +447,13 @@
       <div class="skill-grp">
         <h3>Analytics &amp; Modeling</h3>
         <ul class="chips">
-          <li>Hypothesis testing</li><li>EDA</li><li>A/B testing</li><li>Risk stratification</li>
-          <li>Logistic regression</li><li>Random Forest</li><li>XGBoost</li>
+          <li>Hypothesis testing</li><li>EDA</li><li>Risk stratification</li>
+          <li>Complex-survey estimation</li><li>Ultimate-cluster variance</li><li>Taylor linearisation</li>
+          <li>Logistic regression</li><li>Random Forest</li><li>XGBoost</li><li>Gradient boosting</li>
           <li data-track="analytics">Gaussian Process Regression</li><li data-track="analytics">MLP</li>
-          <li>Cross-validation</li><li>Model evaluation</li>
+          <li>Model calibration</li><li>Decision curve analysis</li><li>Cross-validation</li>
+          <li data-track="analytics">A/B testing</li><li data-track="analytics">Power analysis</li>
+          <li data-track="analytics">Sequential testing</li><li data-track="analytics">CUPED</li>
         </ul>
       </div>
 
