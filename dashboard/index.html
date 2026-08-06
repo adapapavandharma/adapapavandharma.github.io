@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analytics Dashboard — Pavan Dharma Adapa</title>
+<meta name="description" content="Interactive analytics dashboard built from five open-source projects on real CDC and CMS data: ED throughput, claims denials, clinical quality measures, readmission risk, and experiment methodology.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Analytics Dashboard — Pavan Dharma Adapa">
+<meta property="og:description" content="Every figure rendered here is read from the output of a published pipeline. 16,025 survey-weighted ED visits, 126.9M denied claims, 13,810-patient EHR.">
+<meta property="og:url" content="https://adapapavandharma.github.io/dashboard/">
+<meta property="og:image" content="https://adapapavandharma.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0e0d" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fbfdfc" media="(prefers-color-scheme: light)">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0e0d'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='17' font-weight='700' fill='%2322d3ee' text-anchor='middle'%3E&gt;_%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="dash.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="back" href="../">
+      <span aria-hidden="true">←</span> portfolio
+    </a>
+    <div class="title-block">
+      <h1>Analytics Dashboard</h1>
+      <p class="sub">Every figure below is read from the output of a published pipeline &mdash;
+        nothing is typed in by hand.</p>
+    </div>
+    <button class="icon-btn" id="theme-toggle" aria-label="Switch theme" title="Toggle theme">
+      <svg class="i-moon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M12 17a5 5 0 1 1 0-10 5 5 0 0 1 0 10Zm0-13.2a1 1 0 0 1-1-1V1.5a1 1 0 1 1 2 0v1.3a1 1 0 0 1-1 1Zm0 19.7a1 1 0 0 1-1-1v-1.3a1 1 0 1 1 2 0v1.3a1 1 0 0 1-1 1ZM22.5 13h-1.3a1 1 0 1 1 0-2h1.3a1 1 0 1 1 0 2Zm-19.7 0H1.5a1 1 0 1 1 0-2h1.3a1 1 0 1 1 0 2Zm16.4-7.3a1 1 0 0 1-.7-1.7l.9-.9a1 1 0 1 1 1.4 1.4l-.9.9a1 1 0 0 1-.7.3ZM5.2 20.1a1 1 0 0 1-.7-1.7l.9-.9a1 1 0 0 1 1.4 1.4l-.9.9a1 1 0 0 1-.7.3Zm14 .3a1 1 0 0 1-.7-.3l-.9-.9a1 1 0 0 1 1.4-1.4l.9.9a1 1 0 0 1-.7 1.7ZM4.3 5.4a1 1 0 0 1-.7-.3l-.9-.9a1 1 0 0 1 1.4-1.4l.9.9a1 1 0 0 1-.7 1.7Z"/></svg>
+    </button>
+  </div>
+
+  <nav class="tabs wrap" id="tabs" role="tablist" aria-label="Dashboard views">
+    <button role="tab" data-view="ed"          aria-selected="true">Clinical Operations</button>
+    <button role="tab" data-view="denials"     aria-selected="false">Revenue Cycle</button>
+    <button role="tab" data-view="quality"     aria-selected="false">Population Health</button>
+    <button role="tab" data-view="readmission" aria-selected="false">Risk Model</button>
+    <button role="tab" data-view="experiments" aria-selected="false">Experimentation</button>
+  </nav>
+</header>
+
+<main id="main" class="wrap">
+  <div id="loading" class="loading">loading data&hellip;</div>
+  <div id="view" hidden></div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Hand-written SVG charts, no charting library and no third-party requests.
+      Source data and pipelines:
+      <a href="https://github.com/adapapavandharma/ed-throughput-analytics" target="_blank" rel="noopener">ED throughput</a> ·
+      <a href="https://github.com/adapapavandharma/denials-analytics" target="_blank" rel="noopener">denials</a> ·
+      <a href="https://github.com/adapapavandharma/clinical-quality-measures" target="_blank" rel="noopener">quality measures</a> ·
+      <a href="https://github.com/adapapavandharma/readmission-risk" target="_blank" rel="noopener">readmission risk</a> ·
+      <a href="https://github.com/adapapavandharma/experimentation-toolkit" target="_blank" rel="noopener">experimentation</a>
+    </p>
+  </div>
+</footer>
+
+<script type="module" src="dash.js"></script>
+</body>
+</html>

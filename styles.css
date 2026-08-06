@@ -662,3 +662,8 @@ em { font-style: italic; color: var(--text-2); }
 
 /* projects without a repo say so, quietly */
 .card-note { color: var(--muted); font-size: 12.5px; font-style: italic; }
+
+/* dashboard entry points */
+.nav a.nav-dash { color: var(--accent); }
+.btn-dash { border-color: var(--accent-line); }
+.btn-dash:hover { background: var(--accent-soft); }
