@@ -88,8 +88,10 @@ h1 em{font-style:italic;color:var(--accent)}
 .lede b{color:var(--ink);font-weight:600}
 .sub{font-size:15.5px;color:var(--muted);max-width:58ch;margin:0 0 32px;line-height:1.65}
 
-.portrait{position:relative;justify-self:center}
-.portrait img{width:min(310px,72vw);aspect-ratio:1;object-fit:cover;border-radius:22px;
+/* figure carries a UA margin of 1em 40px, which was eating 80px of the column */
+.portrait{position:relative;justify-self:center;margin:0}
+/* height:auto is required or the height="800" attribute wins over aspect-ratio */
+.portrait img{width:min(310px,72vw);height:auto;aspect-ratio:1;object-fit:cover;border-radius:22px;
   box-shadow:var(--shadow);border:1px solid var(--line)}
 .portrait::after{content:"";position:absolute;inset:-14px -14px 26px 26px;border-radius:26px;
   border:1px solid var(--line-2);z-index:-1}
