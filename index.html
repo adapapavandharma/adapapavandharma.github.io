@@ -16,12 +16,56 @@
 <meta property="og:title" content="Pavan Dharma Adapa — Healthcare &amp; Research Data Analyst">
 <meta property="og:description" content="Five published analyses on real CMS, CDC and EHR data — each with a live dashboard, tests, and its limitations stated.">
 <meta property="og:url" content="https://adapapavandharma.github.io/">
-<meta property="og:image" content="https://adapapavandharma.github.io/assets/og.png">
+<meta property="og:image" content="https://adapapavandharma.github.io/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/portrait.jpg">
+<meta name="theme-color" content="#0f5f57">
 <link rel="stylesheet" href="styles.css">
 <script>
   /* Set the theme before first paint so there is no flash. */
   try{var t=localStorage.getItem('pda:theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Pavan Dharma Adapa",
+  "jobTitle": "Healthcare & Research Data Analyst",
+  "email": "mailto:adapapavandharma@gmail.com",
+  "url": "https://adapapavandharma.github.io/",
+  "image": "https://adapapavandharma.github.io/assets/portrait.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Starkville",
+    "addressRegion": "MS",
+    "addressCountry": "US"
+  },
+  "alumniOf": [
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Mississippi State University"
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      "name": "Malla Reddy University"
+    }
+  ],
+  "knowsAbout": [
+    "Healthcare data analysis",
+    "Clinical quality measures",
+    "HEDIS",
+    "CMS eCQM",
+    "SQL",
+    "Python",
+    "Survey-weighted estimation",
+    "Revenue cycle analytics"
+  ],
+  "sameAs": [
+    "https://github.com/adapapavandharma",
+    "https://linkedin.com/in/adapapavandharma"
+  ]
+}
 </script>
 </head>
 <body>
@@ -90,7 +134,7 @@
 
   <div class="proof">
     <div class="proof-grid">
-      <div class="stat"><div class="n">126.9M</div><div class="l">denied claims analysed across every federal Marketplace plan</div></div>
+      <div class="stat"><div class="n">126.9M</div><div class="l">denied claims analyzed across every federal Marketplace plan</div></div>
       <div class="stat"><div class="n">155.4M</div><div class="l">ED visits estimated, reproducing CDC's published total exactly</div></div>
       <div class="stat"><div class="n">13,810</div><div class="l">patient EHR with HEDIS and CMS eCQM measures computed</div></div>
       <div class="stat"><div class="n">30</div><div class="l">merged pull requests to a published scientific pipeline</div></div>
@@ -114,7 +158,7 @@
     <div class="work">
 
       <article class="entry">
-        <div class="idx">01</div>
+        <div class="idx" aria-hidden="true">01</div>
         <div>
         <div class="card-top">
           <h3>Clinical Quality Measures Engine</h3>
@@ -127,9 +171,9 @@
           reviewable diff a clinical analyst can sign off rather than a code change with regression risk.
         </p>
         <p class="finding">
-          CMS122 reports <b>17.3%</b> of diabetic patients in poor glycaemic control. Decomposing that
+          CMS122 reports <b>17.3%</b> of diabetic patients in poor glycemic control. Decomposing that
           numerator: <b>203 of the 204</b> were counted because they were <b>never tested at all</b>.
-          It is a testing-outreach problem, not a glycaemic-control problem — and no amount of clinical
+          It is a testing-outreach problem, not a glycemic-control problem — and no amount of clinical
           intervention on control would move the number.
         </p>
         <p class="limit">
@@ -146,7 +190,7 @@
       </article>
 
       <article class="entry">
-        <div class="idx">02</div>
+        <div class="idx" aria-hidden="true">02</div>
         <div>
         <div class="card-top">
           <h3>Claims Denials &amp; Appeals</h3>
@@ -167,7 +211,7 @@
           no denial reason codes at claim level, and no way to tell whether successful appeals differ
           systematically from unsuccessful ones. It sizes the gap; it cannot work a single claim.
         </p>
-        <ul class="tags"><li>SQL</li><li>Python</li><li>window functions</li><li>dimensional modelling</li><li>revenue cycle</li></ul>
+        <ul class="tags"><li>SQL</li><li>Python</li><li>window functions</li><li>dimensional modeling</li><li>revenue cycle</li></ul>
         <p class="links">
           <a class="live" href="https://adapapavandharma.github.io/denials-analytics/" target="_blank" rel="noopener">Open live dashboard →</a>
           <a href="https://github.com/adapapavandharma/denials-analytics" target="_blank" rel="noopener">Code</a>
@@ -176,7 +220,7 @@
       </article>
 
       <article class="entry">
-        <div class="idx">03</div>
+        <div class="idx" aria-hidden="true">03</div>
         <div>
         <div class="card-top">
           <h3>Emergency Department Throughput</h3>
@@ -190,7 +234,7 @@
         </p>
         <p class="finding">
           It is not <i>when</i>, it is <i>where</i>. Between-hospital variation in door-to-provider time is
-          <b>3.56×</b> larger than between-hour variation. And the peak-hour effect everyone optimises for
+          <b>3.56×</b> larger than between-hour variation. And the peak-hour effect everyone optimizes for
           is <b>not statistically detectable</b> — difference 4.87 min, p = 0.406. Reported as a null
           result rather than dropped.
         </p>
@@ -199,7 +243,7 @@
           interval and an NCHS reliability flag. The variation decomposition covers only the 45 hospitals
           with 100+ sampled visits.
         </p>
-        <ul class="tags"><li>Python</li><li>survey statistics</li><li>Taylor linearisation</li><li>SQLite star schema</li><li>reproducibility guard</li></ul>
+        <ul class="tags"><li>Python</li><li>survey statistics</li><li>Taylor linearization</li><li>SQLite star schema</li><li>reproducibility guard</li></ul>
         <p class="links">
           <a class="live" href="https://adapapavandharma.github.io/ed-throughput-analytics/" target="_blank" rel="noopener">Open live dashboard →</a>
           <a href="https://github.com/adapapavandharma/ed-throughput-analytics" target="_blank" rel="noopener">Code</a>
@@ -208,7 +252,7 @@
       </article>
 
       <article class="entry">
-        <div class="idx">04</div>
+        <div class="idx" aria-hidden="true">04</div>
         <div>
         <div class="card-top">
           <h3>30-Day Readmission Risk</h3>
@@ -239,7 +283,7 @@
       </article>
 
       <article class="entry">
-        <div class="idx">05</div>
+        <div class="idx" aria-hidden="true">05</div>
         <div>
         <div class="card-top">
           <h3>Experimentation Toolkit</h3>
@@ -258,7 +302,7 @@
         </p>
         <p class="limit">
           <b>Scope.</b> This is product-analytics methodology rather than healthcare. It is here because
-          the statistics are the strongest in the set, not because it is on the path I am hiring into.
+          the statistics are the strongest in the set, not because it is the path I am applying for.
         </p>
         <ul class="tags"><li>Python</li><li>CUPED</li><li>sequential testing</li><li>power analysis</li><li>SRM</li></ul>
         <p class="links">
@@ -295,25 +339,25 @@
       </div>
 
       <div class="role">
-        <div class="when">Aug 2024 — Aug 2025</div>
-        <div>
-          <h3>Graduate Research Assistant</h3>
-          <p class="org">Mississippi State University</p>
-          <ul>
-            <li>Managed and analysed a <b>900,000+ record</b> public-health surveillance dataset, and prepared the written and oral reports presented to faculty across two departments.</li>
-            <li>Second author on a manuscript in progress; contributed the data preparation, statistical modelling and results reporting.</li>
-            <li>Built the automated collection and cleaning workflow that standardised multi-source research data, <b>cutting per-dataset processing from hours to under 10 minutes</b>.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="role">
         <div class="when">Sep 2025 — May 2026</div>
         <div>
           <h3>Graduate Teaching Assistant</h3>
           <p class="org">Mississippi State University</p>
           <ul>
-            <li>Taught data cleaning, transformation and visualisation in Python and R to <b>100+ students across six courses</b>, and reported completion and grade metrics that let instructors reach at-risk students earlier.</li>
+            <li>Taught data cleaning, transformation and visualization in Python and R to <b>100+ students across six courses</b>, and reported completion and grade metrics that let instructors reach at-risk students earlier.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="when">Aug 2024 — Aug 2025</div>
+        <div>
+          <h3>Graduate Research Assistant</h3>
+          <p class="org">Mississippi State University</p>
+          <ul>
+            <li>Managed and analyzed a <b>900,000+ record</b> public-health surveillance dataset, and prepared the written and oral reports presented to faculty across two departments.</li>
+            <li>Second author on a manuscript in progress; contributed the data preparation, statistical modeling and results reporting.</li>
+            <li>Built the automated collection and cleaning workflow that standardized multi-source research data, <b>cutting per-dataset processing from hours to under 10 minutes</b>.</li>
           </ul>
         </div>
       </div>
@@ -351,7 +395,7 @@
       </div>
       <div class="skill">
         <h3>Data management</h3>
-        <ul><li>ETL/ELT</li><li>dimensional modelling</li><li>data quality &amp; validation</li><li>reproducible pipelines</li><li>technical documentation</li><li>Git</li><li>CI</li></ul>
+        <ul><li>ETL/ELT</li><li>dimensional modeling</li><li>data quality &amp; validation</li><li>reproducible pipelines</li><li>technical documentation</li><li>Git</li><li>CI</li></ul>
       </div>
       <div class="skill">
         <h3>Statistics &amp; reporting</h3>
@@ -360,7 +404,7 @@
       <p class="note">
         <b>On Epic:</b> I am <b>not Epic certified</b>, and certification requires employer sponsorship.
         I have studied the Clarity and Caboodle reporting concepts on my own, and my quality-measures work
-        is modelled on publicly documented schemas — but that is self-study, not certification or
+        is modeled on publicly documented schemas — but that is self-study, not certification or
         production experience, and I would not claim otherwise.
       </p>
     </div>
@@ -386,7 +430,7 @@
     </div>
     <div class="pub">
       <span class="tag">Publication · in progress</span>
-      <div>Computational Tools for Modeling Respiratory Disease Spread in Commercial Poultry Production</div>
+      <div class="title">Computational Tools for Modeling Respiratory Disease Spread in Commercial Poultry Production</div>
       <div class="authors">Zhang Li, <u>Pavan Dharma Adapa</u>, Sai Harika Gade, S. Ratnavale, N. Michael</div>
     </div>
   </div>
@@ -398,7 +442,7 @@
     <div class="contact">
       <h2>Looking for a healthcare or research data role</h2>
       <p>
-        Work-authorised through June 2027 on F-1 OPT and eligible for the 24-month STEM extension —
+        Work-authorized through June 2027 on F-1 OPT and eligible for the 24-month STEM extension —
         no sponsorship required until 2029. Available immediately, and open to relocation.
       </p>
       <div class="cta">
