@@ -87,8 +87,14 @@ foreach ($item in $metrics) {
 # footer url
 $g.DrawString('adapapavandharma.github.io', $fSmall, $bAccent, [float]$M, [float]578)
 
-$out = 'D:\Pavan\portfolio\assets\og.png'
-$bmp.Save($out, [System.Drawing.Imaging.ImageFormat]::Png)
+# Resolve next to this script. The old hardcoded D: path does not exist on
+# this machine, so regenerating silently wrote nowhere useful.
+$out = Join-Path (Split-Path $PSScriptRoot -Parent) "assets"
+$out = Join-Path $out "og.jpg"
+$jpegEnc = [System.Drawing.Imaging.ImageCodecInfo]::GetImageEncoders() | Where-Object { $_.MimeType -eq 'image/jpeg' }
+$encParams = New-Object System.Drawing.Imaging.EncoderParameters(1)
+$encParams.Param[0] = New-Object System.Drawing.Imaging.EncoderParameter([System.Drawing.Imaging.Encoder]::Quality, 88L)
+$bmp.Save($out, $jpegEnc, $encParams)
 $g.Dispose(); $bmp.Dispose()
 "wrote $out"
 

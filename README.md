@@ -48,7 +48,8 @@ To add a project, copy an existing `<article class="card">` block and set its `d
 - The **metric tiles** in the hero (`data-count` attributes)
 - The **typed hero lines** — `TRACK_COPY` at the top of `main.js`
 - The **JSON-LD block** in `<head>` (helps Google show a proper knowledge panel for your name)
-- The **OG image** at `assets/og.png`, regenerated from `tools/make-og.ps1`
+- The **OG image** at `assets/og.jpg`, regenerated from `tools/make-og.ps1`
+  (JPEG, not PNG: the PNG was 575KB for the same 1200x630 photographic image)
 
 ---
 
