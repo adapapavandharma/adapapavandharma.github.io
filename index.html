@@ -24,7 +24,10 @@
 
 <header class="site">
   <div class="wrap">
-    <a class="brand" href="#top">Pavan Dharma Adapa <span>· data analyst</span></a>
+    <a class="brand" href="#top">
+      <img src="assets/portrait.jpg" alt="" width="32" height="32">
+      <span><b>Pavan Dharma Adapa</b><span>Healthcare &amp; Research Data Analyst</span></span>
+    </a>
     <nav aria-label="Sections">
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
@@ -45,38 +48,40 @@
 
 <!-- ── hero ─────────────────────────────────────────────── -->
 <div class="wrap hero">
-  <p class="avail">Available now — M.S. completed May 2026</p>
-  <h1>I build the layer<br>your numbers rest on.</h1>
-  <p class="lede">
-    Healthcare and research data analyst with an M.S. in Computer Science.
-    I work on the unglamorous part — <b>validated pipelines, reproducible results,
-    and checks that fail loudly instead of quietly</b>.
-  </p>
-  <p class="sub">
-    Five published analyses below, on real CMS claims, CDC survey microdata and EHR
-    records. Each one states what it found, how it was verified, and where it falls short.
-    Every figure is reproducible from the code.
-  </p>
-
-  <ul class="roles">
-    <li>Healthcare Data Analyst</li>
-    <li>Clinical Data Coordinator</li>
-    <li>Research Data Analyst</li>
-    <li>Biomedical Informatics</li>
-  </ul>
-
-  <div class="cta">
-    <a class="btn btn-primary" href="mailto:adapapavandharma@gmail.com">Get in touch</a>
-    <a class="btn" href="dashboard/">Live analytics dashboard</a>
-    <a class="btn" href="https://github.com/adapapavandharma" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn" href="https://linkedin.com/in/adapapavandharma" target="_blank" rel="noopener">LinkedIn</a>
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Available now &middot; M.S. completed May 2026</p>
+      <h1>I build the layer<br>your numbers <em>rest on</em>.</h1>
+      <p class="lede">
+        Healthcare and research data analyst with an M.S. in Computer Science.
+        I work on the unglamorous part &mdash; <b>validated pipelines, reproducible
+        results, and checks that fail loudly instead of quietly</b>.
+      </p>
+      <p class="sub">
+        Five published analyses below, on real CMS claims, CDC survey microdata and
+        EHR records. Each states what it found, how it was verified, and where it
+        falls short. Every figure is reproducible from the code.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:adapapavandharma@gmail.com">Get in touch</a>
+        <a class="btn" href="#work">See the work</a>
+        <a class="btn" href="dashboard/">Live dashboard</a>
+      </div>
+      <p class="cvline">
+        R&eacute;sum&eacute; &mdash;
+        <a href="resume/Pavan_Adapa_Healthcare_Data_Analyst.pdf" download>Healthcare Data</a>
+        <a href="resume/Pavan_Adapa_Clinical_Data_Coordinator.pdf" download>Clinical Data</a>
+        <a href="resume/Pavan_Adapa_Research_Data_Analyst.pdf" download>Research Data</a>
+      </p>
+    </div>
+    <figure class="portrait">
+      <img src="assets/portrait.jpg"
+           srcset="assets/portrait.jpg 800w, assets/portrait@2x.jpg 1400w"
+           sizes="(max-width:900px) 72vw, 310px"
+           width="800" height="800" fetchpriority="high"
+           alt="Pavan Dharma Adapa">
+    </figure>
   </div>
-  <p class="cvline">
-    Résumé —
-    <a href="resume/Pavan_Adapa_Healthcare_Data_Analyst.pdf" download>Healthcare Data Analyst</a>
-    <a href="resume/Pavan_Adapa_Clinical_Data_Coordinator.pdf" download>Clinical Data Coordinator</a>
-    <a href="resume/Pavan_Adapa_Research_Data_Analyst.pdf" download>Research Data Analyst</a>
-  </p>
 
   <div class="proof">
     <div class="proof-grid">
@@ -91,15 +96,21 @@
 <!-- ── work ─────────────────────────────────────────────── -->
 <section id="work">
   <div class="wrap">
-    <div class="sec-h"><h2>Selected work</h2><span class="rule"></span></div>
+    <div class="sec-h">
+      <span class="k">Work</span>
+      <h2>Five analyses, five live dashboards</h2>
+    </div>
     <p class="sec-intro">
-      Every project is public code with tests and continuous integration, and every one has a
-      live dashboard you can open without installing anything.
+      Public code with tests and continuous integration behind every one, and a live dashboard
+      you can open without installing anything. Each entry states its limitation as plainly as
+      its finding — that is the point of them.
     </p>
 
-    <div class="cards">
+    <div class="work">
 
-      <article class="card">
+      <article class="entry">
+        <div class="idx">01</div>
+        <div>
         <div class="card-top">
           <h3>Clinical Quality Measures Engine</h3>
           <span class="src">HEDIS / CMS eCQM · Synthea synthetic non-PHI EHR</span>
@@ -126,9 +137,12 @@
           <a class="live" href="https://adapapavandharma.github.io/clinical-quality-measures/" target="_blank" rel="noopener">Open live scorecard →</a>
           <a href="https://github.com/adapapavandharma/clinical-quality-measures" target="_blank" rel="noopener">Code</a>
         </p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="entry">
+        <div class="idx">02</div>
+        <div>
         <div class="card-top">
           <h3>Claims Denials &amp; Appeals</h3>
           <span class="src">CMS Transparency in Coverage, 2021–2023 · real public filings</span>
@@ -153,9 +167,12 @@
           <a class="live" href="https://adapapavandharma.github.io/denials-analytics/" target="_blank" rel="noopener">Open live dashboard →</a>
           <a href="https://github.com/adapapavandharma/denials-analytics" target="_blank" rel="noopener">Code</a>
         </p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="entry">
+        <div class="idx">03</div>
+        <div>
         <div class="card-top">
           <h3>Emergency Department Throughput</h3>
           <span class="src">CDC/NCHS NHAMCS 2022 · real national survey microdata</span>
@@ -182,9 +199,12 @@
           <a class="live" href="https://adapapavandharma.github.io/ed-throughput-analytics/" target="_blank" rel="noopener">Open live dashboard →</a>
           <a href="https://github.com/adapapavandharma/ed-throughput-analytics" target="_blank" rel="noopener">Code</a>
         </p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="entry">
+        <div class="idx">04</div>
+        <div>
         <div class="card-top">
           <h3>30-Day Readmission Risk</h3>
           <span class="src">UCI Diabetes 130-US Hospitals · real de-identified encounters</span>
@@ -210,9 +230,12 @@
           <a class="live" href="https://adapapavandharma.github.io/readmission-risk/" target="_blank" rel="noopener">Open live evaluation →</a>
           <a href="https://github.com/adapapavandharma/readmission-risk" target="_blank" rel="noopener">Code</a>
         </p>
+        </div>
       </article>
 
-      <article class="card">
+      <article class="entry">
+        <div class="idx">05</div>
+        <div>
         <div class="card-top">
           <h3>Experimentation Toolkit</h3>
           <span class="src">simulation against known ground truth</span>
@@ -237,6 +260,7 @@
           <a class="live" href="https://adapapavandharma.github.io/experimentation-toolkit/" target="_blank" rel="noopener">Open live results →</a>
           <a href="https://github.com/adapapavandharma/experimentation-toolkit" target="_blank" rel="noopener">Code</a>
         </p>
+        </div>
       </article>
 
     </div>
@@ -246,7 +270,10 @@
 <!-- ── experience ───────────────────────────────────────── -->
 <section id="experience">
   <div class="wrap">
-    <div class="sec-h"><h2>Experience</h2><span class="rule"></span></div>
+    <div class="sec-h">
+      <span class="k">Experience</span>
+      <h2>Where the practice comes from</h2>
+    </div>
     <div class="roles-list">
 
       <div class="role">
@@ -304,7 +331,10 @@
 <!-- ── skills ───────────────────────────────────────────── -->
 <section id="skills">
   <div class="wrap">
-    <div class="sec-h"><h2>Skills</h2><span class="rule"></span></div>
+    <div class="sec-h">
+      <span class="k">Skills</span>
+      <h2>What I actually use</h2>
+    </div>
     <div class="skills">
       <div class="skill">
         <h3>Analysis &amp; programming</h3>
@@ -335,7 +365,10 @@
 <!-- ── education ────────────────────────────────────────── -->
 <section id="education">
   <div class="wrap">
-    <div class="sec-h"><h2>Education &amp; research</h2><span class="rule"></span></div>
+    <div class="sec-h">
+      <span class="k">Education</span>
+      <h2>Degrees and research output</h2>
+    </div>
     <div class="edu">
       <div class="edu-row">
         <div class="when">May 2026</div>
