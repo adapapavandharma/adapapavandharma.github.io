@@ -2,21 +2,38 @@
    Pavan Dharma Adapa — portfolio
    Vanilla JS, no dependencies.
 
-   The site holds two profiles ("tracks") in one document:
-     epic      → Healthcare Data Analyst / Epic reporting
-     analytics → Data Analyst / BI
+   The site holds three profiles ("tracks") in one document:
+     healthcare → Healthcare Data Analyst  (claims, quality measures, revenue cycle)
+     clinical   → Clinical Data Coordinator (trial data, validation, documentation)
+     research   → Research Data Analyst     (reproducible pipelines, informatics)
 
-   Every track-specific element carries data-track="epic" or
-   data-track="analytics". Anything without the attribute (or with
-   data-track="both") is always shown. With JS disabled the whole
-   document renders, which is the right fallback for crawlers.
+   Every track-specific element carries data-track="healthcare",
+   data-track="clinical" or data-track="research". Anything without the
+   attribute (or with data-track="both") is always shown. With JS disabled the
+   whole document renders, which is the right fallback for crawlers.
    ============================================================ */
 (function () {
   'use strict';
 
-  var DEFAULT_TRACK = 'epic';
-  var TRACKS = ['epic', 'analytics'];
+  var DEFAULT_TRACK = 'healthcare';
+  var TRACKS = ['healthcare', 'clinical', 'research'];
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+
+  // The resume button serves the PDF for whichever track is selected, so a
+  // visitor who picked "clinical data" does not download the healthcare CV.
+  var RESUME_BY_TRACK = {
+    healthcare: ['resume/Pavan_Adapa_Healthcare_Data_Analyst.pdf', 'Résumé — Healthcare Data Analyst'],
+    clinical:   ['resume/Pavan_Adapa_Clinical_Data_Coordinator.pdf', 'Résumé — Clinical Data Coordinator'],
+    research:   ['resume/Pavan_Adapa_Research_Data_Analyst.pdf', 'Résumé — Research Data Analyst']
+  };
+  function syncResume(track) {
+    var a = document.getElementById('resume-link');
+    var l = document.getElementById('resume-label');
+    var r = RESUME_BY_TRACK[track] || RESUME_BY_TRACK.healthcare;
+    if (a) a.setAttribute('href', r[0]);
+    if (l) l.textContent = r[1];
+  }
 
   var root = document.documentElement;
   root.classList.add('js');
@@ -58,8 +75,10 @@
       q = q.toLowerCase();
       if (TRACKS.indexOf(q) > -1) return q;
       // friendly aliases so a mistyped link still lands somewhere sensible
-      if (/health|clinic|epic|clarity/.test(q)) return 'epic';
-      if (/data|analy|bi|business/.test(q)) return 'analytics';
+      if (/clinical|trial|coordinator|crc/.test(q)) return 'clinical';
+      if (/research|informatic|bioinformatic|reproduc/.test(q)) return 'research';
+      // legacy ?role=epic and ?role=analytics links predate the 2026 rework
+      if (/health|epic|clarity|cogito|caboodle|claims|revenue|data|analy|bi|business/.test(q)) return 'healthcare';
     }
     try {
       var saved = localStorage.getItem('pda:track');
@@ -69,6 +88,7 @@
   }
 
   function setTrack(next, opts) {
+    try { syncResume(next); } catch (e) {}
     opts = opts || {};
     if (TRACKS.indexOf(next) < 0 || next === track) return;
     track = next;
@@ -324,8 +344,9 @@
     { icon: '#', label: 'Contact',    hint: 'section', keys: 'email hire reach',   run: function () { goTo('#contact'); } },
     { icon: '↑', label: 'Back to top', hint: 'section', keys: 'home start',        run: function () { goTo('#top'); } },
 
-    { icon: '⇄', label: 'Switch to Healthcare / Epic profile', hint: 'track', keys: 'clinical clarity cogito caboodle', run: function () { setTrack('epic'); toast('Healthcare / Epic profile'); } },
-    { icon: '⇄', label: 'Switch to Data Analytics profile',    hint: 'track', keys: 'bi sql tableau business',          run: function () { setTrack('analytics'); toast('Data Analytics profile'); } },
+    { icon: '⇄', label: 'Switch to Healthcare Data profile', hint: 'track', keys: 'claims quality revenue cycle payer', run: function () { setTrack('healthcare'); toast('Healthcare Data profile'); } },
+    { icon: '⇄', label: 'Switch to Clinical Data profile',   hint: 'track', keys: 'trial coordinator cro validation',   run: function () { setTrack('clinical'); toast('Clinical Data profile'); } },
+    { icon: '⇄', label: 'Switch to Research Data profile',   hint: 'track', keys: 'informatics pipeline reproducible',  run: function () { setTrack('research'); toast('Research Data profile'); } },
 
     { icon: '⎘', label: 'Copy email address', hint: 'copy', keys: 'mail gmail contact', run: function () { copyText('adapapavandharma@gmail.com', 'Email'); } },
     { icon: '⎘', label: 'Copy phone number',  hint: 'copy', keys: 'call tel',           run: function () { copyText('+16623709614', 'Phone'); } },

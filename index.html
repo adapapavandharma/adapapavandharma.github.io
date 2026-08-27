@@ -101,8 +101,9 @@
     <p class="hero-role">
       <span class="caret" aria-hidden="true">▸</span>
       <span id="typed" class="typed"></span><span class="cursor" aria-hidden="true"></span>
-      <span class="sr-only" data-track="epic">Healthcare Data Analyst — Epic Clarity, Cogito &amp; Caboodle reporting</span>
-      <span class="sr-only" data-track="analytics">Data Analyst — SQL, Python, Tableau &amp; Power BI</span>
+      <span class="sr-only" data-track="healthcare">Healthcare Data Analyst — claims, quality measures &amp; revenue-cycle reporting</span>
+      <span class="sr-only" data-track="clinical">Clinical Data Coordinator — trial data management &amp; validation</span>
+      <span class="sr-only" data-track="research">Research Data Analyst — reproducible pipelines &amp; biomedical informatics</span>
     </p>
 
     <p class="status">
@@ -111,14 +112,14 @@
       <span class="dim">— M.S. May 2026 · currently interning at Mississippi State · based in MS, US</span>
     </p>
 
-    <p class="hero-blurb" data-track="epic">
+    <p class="hero-blurb" data-track="healthcare">
       I build the unglamorous layer clinical reporting stands on — ETL pipelines, star-schema
       warehouses, validated data models — then turn them into findings an operations leader can act
       on. The work below runs on <b>real public health data</b>: CDC emergency department microdata,
       CMS claims-denial filings, multi-hospital inpatient encounters. Every figure is reproduced by
       the code in the repo, including the ones that came out inconvenient.
     </p>
-    <p class="hero-blurb" data-track="analytics">
+    <p class="hero-blurb" data-track="both">
       I turn messy, multi-source data into something a stakeholder can act on — and I check whether
       the answer holds. The work below runs on <b>real public datasets at national scale</b>, with
       design-correct survey inference, calibrated models, and experiment analysis that accounts for
@@ -129,19 +130,24 @@
     <div class="switch-block">
       <p class="switch-label">
         <span class="dim">$</span> profile <span class="flag">--role</span>
-        <span class="switch-hint">— I&nbsp;apply across two tracks. Pick the one you&nbsp;hire&nbsp;for:</span>
+        <span class="switch-hint">— I&nbsp;apply across three tracks. Pick the one you&nbsp;hire&nbsp;for:</span>
       </p>
       <div class="switch" role="tablist" aria-label="Choose profile track">
-        <button role="tab" class="switch-opt" data-set-track="epic" aria-selected="false">
-          <span class="dot" aria-hidden="true"></span>
-          <span class="switch-t">healthcare&nbsp;/&nbsp;epic</span>
-          <span class="switch-s">Clarity · Cogito · revenue cycle</span>
-        </button>
-        <button role="tab" class="switch-opt" data-set-track="analytics" aria-selected="false">
-          <span class="dot" aria-hidden="true"></span>
-          <span class="switch-t">data&nbsp;analytics</span>
-          <span class="switch-s">SQL · BI · predictive modeling</span>
-        </button>
+        <button role="tab" class="switch-opt" data-set-track="healthcare" aria-selected="false">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="switch-t">healthcare&nbsp;data</span>
+            <span class="switch-s">claims · quality measures · revenue cycle</span>
+          </button>
+          <button role="tab" class="switch-opt" data-set-track="clinical" aria-selected="false">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="switch-t">clinical&nbsp;data</span>
+            <span class="switch-s">trial data · validation · documentation</span>
+          </button>
+          <button role="tab" class="switch-opt" data-set-track="research" aria-selected="false">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="switch-t">research&nbsp;data</span>
+            <span class="switch-s">reproducible pipelines · informatics</span>
+          </button>
       </div>
     </div>
 
@@ -150,8 +156,8 @@
       <li><b data-count="900">0</b><span class="unit">K+</span><small>records analyzed</small></li>
       <li><b data-count="95">0</b><span class="unit">%</span><small>processing time cut</small></li>
       <li><b data-count="87">0</b><span class="unit">%</span><small>forecast accuracy</small></li>
-      <li data-track="epic"><b data-count="127">0</b><span class="unit">M</span><small>real denied claims analysed</small></li>
-      <li data-track="analytics"><b data-count="50">0</b><span class="unit">%</span><small>manual analysis removed</small></li>
+      <li data-track="healthcare"><b data-count="127">0</b><span class="unit">M</span><small>real denied claims analysed</small></li>
+      <li data-track="both"><b data-count="50">0</b><span class="unit">%</span><small>manual analysis removed</small></li>
     </ul>
 
     <div class="cta-row">
@@ -159,7 +165,7 @@
         <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6Zm2.4.5 7.6 5.3 7.6-5.3H4.4Z"/></svg>
         Get in touch
       </a>
-      <a class="btn" id="resume-link" href="resume/Pavan_Dharma_Adapa_Healthcare_Data_Analyst.pdf" download>
+      <a class="btn" id="resume-link" href="resume/Pavan_Adapa_Healthcare_Data_Analyst.pdf" download>
         <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3 1.4 1.4-5.7 5.7-5.7-5.7 1.4-1.4L11 13.6V4a1 1 0 0 1 1-1ZM4 19h16v2H4v-2Z"/></svg>
         <span id="resume-label">Résumé (PDF)</span>
       </a>
@@ -177,13 +183,13 @@
 <section class="sect" id="work">
   <div class="wrap">
     <h2 class="sect-h"><span class="dim">$</span> ls <span class="flag">./projects</span></h2>
-    <p class="sect-note" data-track="epic">
+    <p class="sect-note" data-track="healthcare">
       Built on real public health datasets (CDC/NCHS, CMS) where patient-level data exists, and on
       synthetic non-PHI data modeled on Epic&rsquo;s publicly documented Clarity and Caboodle schemas
       where it does not. Each project says which, and no result is reported that its own code
       does not reproduce.
     </p>
-    <p class="sect-note" data-track="analytics">
+    <p class="sect-note" data-track="both">
       End-to-end: raw sources → ETL → model → dashboard → the recommendation someone can act on.
     </p>
 
@@ -207,6 +213,7 @@
         </ul>
         <ul class="tags"><li>Python</li><li>SQL</li><li>Survey statistics</li><li>SQLite star schema</li><li>Matplotlib</li></ul>
         <p class="card-links">
+          <a href="https://adapapavandharma.github.io/ed-throughput-analytics/" target="_blank" rel="noopener"><b>Open live dashboard ↗</b></a>
           <a href="https://github.com/adapapavandharma/ed-throughput-analytics" target="_blank" rel="noopener">View code on GitHub ↗</a>
         </p>
       </article>
@@ -229,6 +236,7 @@
         </ul>
         <ul class="tags"><li>scikit-learn</li><li>Gradient boosting</li><li>Calibration</li><li>SQL</li><li>Decision curve analysis</li></ul>
         <p class="card-links">
+          <a href="https://adapapavandharma.github.io/readmission-risk/" target="_blank" rel="noopener"><b>Open live dashboard ↗</b></a>
           <a href="https://github.com/adapapavandharma/readmission-risk" target="_blank" rel="noopener">View code on GitHub ↗</a>
         </p>
       </article>
@@ -251,11 +259,12 @@
         </ul>
         <ul class="tags"><li>SQL</li><li>Window functions</li><li>Panel data</li><li>Two-grain fact design</li><li>Python</li></ul>
         <p class="card-links">
+          <a href="https://adapapavandharma.github.io/denials-analytics/" target="_blank" rel="noopener"><b>Open live dashboard ↗</b></a>
           <a href="https://github.com/adapapavandharma/denials-analytics" target="_blank" rel="noopener">View code on GitHub ↗</a>
         </p>
       </article>
 
-      <article class="card" data-track="epic">
+      <article class="card" data-track="healthcare">
         <header class="card-h">
           <h3>Clinical Quality Measures — A Declarative Engine</h3>
           <span class="card-kind">Population Health · HEDIS / eCQM</span>
@@ -273,11 +282,12 @@
         </ul>
         <ul class="tags"><li>SNOMED CT</li><li>LOINC</li><li>SQL</li><li>Synthea</li><li>Python</li></ul>
         <p class="card-links">
+          <a href="https://adapapavandharma.github.io/clinical-quality-measures/" target="_blank" rel="noopener"><b>Open live dashboard ↗</b></a>
           <a href="https://github.com/adapapavandharma/clinical-quality-measures" target="_blank" rel="noopener">View code on GitHub ↗</a>
         </p>
       </article>
 
-      <article class="card" data-track="analytics">
+      <article class="card" data-track="both">
         <header class="card-h">
           <h3>Experimentation Toolkit — What Goes Wrong in A/B Tests</h3>
           <span class="card-kind">Experimentation · Causal inference</span>
@@ -295,6 +305,7 @@
         </ul>
         <ul class="tags"><li>SciPy</li><li>Sequential testing</li><li>CUPED</li><li>Power analysis</li><li>NumPy</li></ul>
         <p class="card-links">
+          <a href="https://adapapavandharma.github.io/experimentation-toolkit/" target="_blank" rel="noopener"><b>Open live dashboard ↗</b></a>
           <a href="https://github.com/adapapavandharma/experimentation-toolkit" target="_blank" rel="noopener">View code on GitHub ↗</a>
         </p>
       </article>
@@ -341,7 +352,7 @@
             <li>Ported it from the university&rsquo;s SLURM/HPC cluster to standard Windows and Linux workstations, removing every scheduler and cluster-storage dependency and cutting setup from a multi-day process to a single documented install.</li>
             <li>Cross-validated output against an independently developed implementation: the two agreed to <b>within 0.01 percentage points</b> on every species and genus, with identical read counts — the check that made the lab&rsquo;s results defensible.</li>
             <li>Processed and quality-controlled <b>2M+ sequencing reads</b> across 19 samples, and automated construction of the reference database from NCBI 16S RefSeq (27,700+ sequences, 21,000 taxa) into one command.</li>
-            <li data-track="epic">Cut a taxonomy-lookup step&rsquo;s memory requirement from <b>32&nbsp;GB to under 1&nbsp;GB</b> by replacing a full in-memory load with a streaming filter, and removed a 9&nbsp;GB external data dependency.</li>
+            <li data-track="healthcare">Cut a taxonomy-lookup step&rsquo;s memory requirement from <b>32&nbsp;GB to under 1&nbsp;GB</b> by replacing a full in-memory load with a streaming filter, and removed a 9&nbsp;GB external data dependency.</li>
             <li>Root-caused an intermittent failure that destroyed results after an hour of compute, tracing it to host/guest clock drift rather than the cause the error message named.</li>
             <li>Contributed <b>6 merged pull requests</b> to the lab&rsquo;s open-source tool ahead of public release — packaging, failure diagnostics, citation metadata and contributor tooling.</li>
           </ul>
@@ -351,14 +362,14 @@
       <li class="tl-item" data-track="both">
         <div class="tl-when">Sep 2025 – May 2026</div>
         <div class="tl-body">
-          <h3>Graduate Teaching Assistant &amp; Analytics Mentor</h3>
+          <h3>Graduate Teaching Assistant</h3>
           <p class="tl-org">Mississippi State University — Starkville, MS</p>
           <ul>
-            <li data-track="epic">Trained and supported <b>100+ students</b> across 6 courses on data cleaning, transformation, visualization, and dashboard-based reporting in SQL, Python (Pandas, Matplotlib), and Advanced Excel.</li>
-            <li data-track="analytics">Led lab sessions in Python (Pandas, Matplotlib) and R (ggplot2, dplyr) across 6 data science courses, demonstrating how to clean, transform, and visualize datasets and communicate insight to non-technical audiences.</li>
+            <li data-track="healthcare">Trained and supported <b>100+ students</b> across 6 courses on data cleaning, transformation, visualization, and dashboard-based reporting in SQL, Python (Pandas, Matplotlib), and Advanced Excel.</li>
+            <li data-track="both">Led lab sessions in Python (Pandas, Matplotlib) and R (ggplot2, dplyr) across 6 data science courses, demonstrating how to clean, transform, and visualize datasets and communicate insight to non-technical audiences.</li>
             <li>Tracked KPIs — completion rates, grade distributions, retention — in SQL, Python, and Advanced Excel so instructors could identify at-risk students early and shorten intervention turnaround.</li>
-            <li data-track="epic">Built and led hands-on workshops on IoT sensor data for the SmartCT smart-city initiative, producing traffic, energy, and environmental KPI dashboards while reinforcing data-quality practice.</li>
-            <li data-track="analytics">Designed and evaluated coding assignments simulating real analyst workflows — preprocessing, feature engineering, EDA, model evaluation — improving project completion speed by 25%.</li>
+            <li data-track="healthcare">Built and led hands-on workshops on IoT sensor data for the SmartCT smart-city initiative, producing traffic, energy, and environmental KPI dashboards while reinforcing data-quality practice.</li>
+            <li data-track="both">Designed and evaluated coding assignments simulating real analyst workflows — preprocessing, feature engineering, EDA, model evaluation — improving project completion speed by 25%.</li>
             <li>Created reusable training materials and documentation that improved task-completion speed by <b>25%</b> and standardized analytics practice across cohorts.</li>
           </ul>
         </div>
@@ -367,21 +378,21 @@
       <li class="tl-item" data-track="both">
         <div class="tl-when">Aug 2024 – Aug 2025</div>
         <div class="tl-body">
-          <h3><span data-track="epic">Graduate Research Analyst — Healthcare Data Analytics</span><span data-track="analytics">Graduate Research Analyst</span></h3>
+          <h3><span data-track="healthcare">Graduate Research Assistant</span><span data-track="both">Graduate Research Assistant</span></h3>
           <p class="tl-org">Mississippi State University — Starkville, MS</p>
           <ul>
             <li>Designed and automated a production ETL pipeline (Python, Selenium, SQL) to extract, cleanse, and standardize multi-source clinical and surveillance datasets — cutting processing time <b>95%</b>, from several hours to under 10 minutes per dataset.</li>
             <li>Queried <b>900,000+</b> epidemiological/public-health surveillance records in SQL and Python to surface <b>8 key drivers</b> of disease transmission, delivering data-backed recommendations to non-technical decision-makers.</li>
-            <li data-track="epic">Engineered dimensional / star-schema data models with field-level validation, standardization, and governance across multiple source systems for reproducible, enterprise-scale reporting.</li>
-            <li>Developed and evaluated predictive models (Gaussian Process Regression, Random Forest, XGBoost<span data-track="epic">, logistic regression</span>) reaching <b>87% accuracy</b>, establishing baseline KPIs to monitor model and data quality over time.</li>
+            <li data-track="healthcare">Engineered dimensional / star-schema data models with field-level validation, standardization, and governance across multiple source systems for reproducible, enterprise-scale reporting.</li>
+            <li>Developed and evaluated predictive models (Gaussian Process Regression, Random Forest, XGBoost<span data-track="healthcare">, logistic regression</span>) reaching <b>87% accuracy</b>, establishing baseline KPIs to monitor model and data quality over time.</li>
             <li>Automated feature-engineering and data-cleansing routines, resolving <b>35%</b> of dataset inconsistencies and reducing manual analysis time <b>50%</b>.</li>
-            <li data-track="analytics">Simulated 10,000+ outbreak scenarios using statistical analysis and hypothesis testing, contributing the results to an interdisciplinary research manuscript.</li>
+            <li data-track="both">Simulated 10,000+ outbreak scenarios using statistical analysis and hypothesis testing, contributing the results to an interdisciplinary research manuscript.</li>
             <li>Delivered presentation-ready Tableau and Power BI dashboards and correlation analyses that turned complex findings into decisions leadership could make.</li>
           </ul>
         </div>
       </li>
 
-      <li class="tl-item" data-track="analytics">
+      <li class="tl-item" data-track="both">
         <div class="tl-when">May 2023 – Dec 2023</div>
         <div class="tl-body">
           <h3>Marketing Data Analyst Intern</h3>
@@ -395,7 +406,7 @@
         </div>
       </li>
 
-      <li class="tl-item" data-track="analytics">
+      <li class="tl-item" data-track="both">
         <div class="tl-when">Aug 2022 – Dec 2022</div>
         <div class="tl-body">
           <h3>Data Analytics Intern</h3>
@@ -420,18 +431,18 @@
 
     <div class="skills">
 
-      <div class="skill-grp" data-track="epic">
+      <div class="skill-grp" data-track="healthcare">
         <h3>Epic Ecosystem &amp; Reporting</h3>
-        <p class="grp-note">Self-study / certification prep — not yet certified.</p>
+        <p class="grp-note"><b>Not Epic certified</b>, and certification requires employer sponsorship. Familiar with the reporting concepts below through self-study only.</p>
         <ul class="chips">
           <li>Clarity data model</li><li>ENCOUNTER</li><li>PAT_ENC</li><li>ORDER_PROC</li><li>RESULT</li>
           <li>PAT_DIAGNOSIS</li><li>Cogito</li><li>Caboodle</li><li>Reporting Workbench</li>
           <li>SlicerDicer</li><li>Radar dashboards</li><li>Crystal Reports</li><li>SSRS</li>
-          <li>SAP BusinessObjects</li><li>Epic Sphinx prep</li>
+          <li>SAP BusinessObjects</li>
         </ul>
       </div>
 
-      <div class="skill-grp" data-track="epic">
+      <div class="skill-grp" data-track="healthcare">
         <h3>Healthcare Data &amp; Standards</h3>
         <ul class="chips">
           <li>EHR / EMR</li><li>Clinical &amp; claims data</li><li>Revenue cycle</li><li>Denials &amp; appeals</li>
@@ -445,7 +456,7 @@
         <ul class="chips">
           <li>SQL — joins, CTEs, window functions, query optimization</li><li>Python</li><li>Pandas</li>
           <li>NumPy</li><li>PostgreSQL</li><li>MySQL</li><li>Advanced Excel</li>
-          <li data-track="analytics">R — ggplot2, dplyr</li>
+          <li data-track="both">R — ggplot2, dplyr</li>
         </ul>
       </div>
 
@@ -462,7 +473,7 @@
         <h3>BI &amp; Visualization</h3>
         <ul class="chips">
           <li>Tableau</li><li>Microsoft Power BI</li><li>Matplotlib</li><li>Seaborn</li>
-          <li data-track="analytics">Google Data Studio</li><li>KPI reporting</li><li>Executive dashboards</li>
+          <li data-track="both">Google Data Studio</li><li>KPI reporting</li><li>Executive dashboards</li>
         </ul>
       </div>
 
@@ -472,10 +483,10 @@
           <li>Hypothesis testing</li><li>EDA</li><li>Risk stratification</li>
           <li>Complex-survey estimation</li><li>Ultimate-cluster variance</li><li>Taylor linearisation</li>
           <li>Logistic regression</li><li>Random Forest</li><li>XGBoost</li><li>Gradient boosting</li>
-          <li data-track="analytics">Gaussian Process Regression</li><li data-track="analytics">MLP</li>
+          <li data-track="both">Gaussian Process Regression</li><li data-track="both">MLP</li>
           <li>Model calibration</li><li>Decision curve analysis</li><li>Cross-validation</li>
-          <li data-track="analytics">A/B testing</li><li data-track="analytics">Power analysis</li>
-          <li data-track="analytics">Sequential testing</li><li data-track="analytics">CUPED</li>
+          <li data-track="both">A/B testing</li><li data-track="both">Power analysis</li>
+          <li data-track="both">Sequential testing</li><li data-track="both">CUPED</li>
         </ul>
       </div>
 
@@ -483,7 +494,7 @@
         <h3>Tools &amp; Cloud</h3>
         <ul class="chips">
           <li>Git</li><li>GitHub Actions CI</li><li>pytest</li><li>Snakemake</li><li>conda/Bioconda</li><li>Linux (WSL2)</li><li>AWS</li><li>Jupyter</li><li>Selenium</li>
-          <li data-track="analytics">NLP</li><li data-track="analytics">LLMs</li>
+          <li data-track="both">NLP</li><li data-track="both">LLMs</li>
         </ul>
       </div>
 
@@ -536,11 +547,11 @@
 <section class="sect contact" id="contact">
   <div class="wrap">
     <h2 class="sect-h"><span class="dim">$</span> ./contact<span class="flag">.sh</span></h2>
-    <p class="contact-lead" data-track="epic">
+    <p class="contact-lead" data-track="healthcare">
       <b>Available now for full-time roles</b> in Healthcare Data Analytics, Clinical Analytics
-      and Epic reporting. Graduated May 2026, currently interning, and actively interviewing.
+      and healthcare reporting. Graduated May 2026, currently interning, and actively interviewing.
     </p>
-    <p class="contact-lead" data-track="analytics">
+    <p class="contact-lead" data-track="both">
       <b>Available now for full-time roles</b> in Data Analytics, Business Intelligence and
       Analytics Engineering. Graduated May 2026, currently interning, and actively interviewing.
     </p>
