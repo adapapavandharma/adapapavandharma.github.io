@@ -119,6 +119,9 @@ h1 em{font-style:italic;color:var(--accent)}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .btn-primary{color:#fff}}
 .btn-primary:hover{background:var(--accent-2);border-color:var(--accent-2)}
 .cvline{font-size:14px;color:var(--muted);margin:0}
+/* Two resume lines now (health/research and data/software). .cvline is margin:0,
+   so without this they collide. */
+.cvline + .cvline{margin-top:6px}
 .cvline a{margin-right:16px;white-space:nowrap;display:inline-block}
 /* On a phone these were 23px tall — under the 44px tap-target guideline, and
    they are the most important action on the page. */
