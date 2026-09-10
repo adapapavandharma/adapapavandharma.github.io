@@ -1,9 +1,15 @@
 /* ============================================================
    Dashboard controller.
 
-   Reads data.json — assembled directly from the five projects' pipeline
-   outputs — and renders one view per tab. No figure in here is retyped by
-   hand, so the dashboard cannot drift away from the repositories.
+   Reads data.json and renders one view per tab. No figure in here is
+   retyped by hand: every number comes from data.json, which is built from
+   the five projects' pipeline outputs.
+
+   Not retyped is not the same as cannot drift. data.json is a snapshot. Its
+   ED section was built on 2026-08-05; the ED pipeline fixed its weighted
+   quantiles on 2026-08-11, and this page went on showing the pre-fix 3.9x
+   until 2026-09-10. Rebuild the ED section with tools/build_ed_section.py,
+   and run it with --check whenever an upstream repository's outputs change.
    ============================================================ */
 
 import { barLine, hbar, groupedBar, stacked, lineChart, strip, funnel, fmt } from './charts.js';
