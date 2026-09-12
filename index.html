@@ -9,12 +9,12 @@
 <meta name="robots" content="noai, noimageai">
 <meta name="ai-content-declaration" content="no-training">
 <title>Pavan Dharma Adapa — Healthcare &amp; Research Data Analyst</title>
-<meta name="description" content="Healthcare and research data analyst. M.S. Computer Science. Five published analyses on real CMS, CDC and EHR data — each with a live dashboard, tests, and its limitations stated.">
+<meta name="description" content="Healthcare and research data analyst. M.S. Computer Science. Five public analyses on public CMS and CDC data, de-identified hospital records and a synthetic EHR — each with a live dashboard, tests, and its limitations stated.">
 <meta name="author" content="Pavan Dharma Adapa">
 <link rel="canonical" href="https://adapapavandharma.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pavan Dharma Adapa — Healthcare &amp; Research Data Analyst">
-<meta property="og:description" content="Five published analyses on real CMS, CDC and EHR data — each with a live dashboard, tests, and its limitations stated.">
+<meta property="og:description" content="Five public analyses on public CMS and CDC data, de-identified hospital records and a synthetic EHR — each with a live dashboard, tests, and its limitations stated.">
 <meta property="og:url" content="https://adapapavandharma.github.io/">
 <meta property="og:image" content="https://adapapavandharma.github.io/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -59,7 +59,7 @@
     "SQL",
     "Python",
     "Survey-weighted estimation",
-    "Revenue cycle analytics"
+    "Claims and appeals analytics"
   ],
   "sameAs": [
     "https://github.com/adapapavandharma",
@@ -100,14 +100,15 @@
   <div class="hero-grid">
     <div>
       <p class="eyebrow">Available now &middot; M.S. completed May 2026</p>
-      <h1>I build the layer<br>your numbers <em>rest on</em>.</h1>
+      <h1>Health and research data,<br>cleaned and <em>checked</em>.</h1>
       <p class="lede">
         Healthcare and research data analyst with an M.S. in Computer Science.
-        I work on the unglamorous part &mdash; <b>validated pipelines, reproducible
-        results, and checks that fail loudly instead of quietly</b>.
+        I clean, validate and document data so the results can be checked:
+        <b>validated pipelines, reproducible results, and checks that fail loudly
+        instead of quietly</b>.
       </p>
       <p class="sub">
-        Five published analyses below, on real CMS claims, CDC survey microdata and
+        Five public analyses below, on real CMS claims, CDC survey microdata and
         EHR records. Each states what it found, how it was verified, and where it
         falls short. Every figure is reproducible from the code.
       </p>
@@ -121,12 +122,6 @@
         <a href="resume/Pavan_Adapa_Healthcare_Data_Analyst.pdf" download>Healthcare Data</a>
         <a href="resume/Pavan_Adapa_Clinical_Data_Coordinator.pdf" download>Clinical Data</a>
         <a href="resume/Pavan_Adapa_Research_Data_Analyst.pdf" download>Research Data</a>
-      </p>
-      <p class="cvline">
-        Data &amp; software &mdash;
-        <a href="resume/Pavan_Adapa_Data_Analyst.pdf" download>Data Analyst</a>
-        <a href="resume/Pavan_Adapa_Data_Engineer.pdf" download>Data Engineer</a>
-        <a href="resume/Pavan_Adapa_Software_Engineer.pdf" download>Software Engineer</a>
       </p>
     </div>
     <figure class="portrait">
@@ -143,7 +138,7 @@
       <div class="stat"><div class="n">126.9M</div><div class="l">denied claims analyzed across every federal Marketplace plan</div></div>
       <div class="stat"><div class="n">155.4M</div><div class="l">ED visits estimated, reproducing CDC's published total exactly</div></div>
       <div class="stat"><div class="n">13,810</div><div class="l">patient EHR with HEDIS and CMS eCQM measures computed</div></div>
-      <div class="stat"><div class="n">34</div><div class="l">merged pull requests to an open-source scientific pipeline</div></div>
+      <div class="stat"><div class="n">36</div><div class="l">merged pull requests to an open-source scientific pipeline</div></div>
     </div>
   </div>
 </div>
@@ -178,14 +173,15 @@
         </p>
         <p class="finding">
           CMS122 reports <b>17.3%</b> of diabetic patients in poor glycemic control. Decomposing that
-          numerator: <b>203 of the 204</b> were counted because they were <b>never tested at all</b>.
-          It is a testing-outreach problem, not a glycemic-control problem — and no amount of clinical
-          intervention on control would move the number.
+          numerator: <b>203 of the 204</b> were counted because they had <b>no HbA1c test on record</b>.
+          That is an artifact of how the Synthea generator schedules labs, not a finding about care.
+          I report it as a check on the engine: the measure counts an untested patient as poor control,
+          as the specification says it should.
         </p>
         <p class="limit">
-          <b>Limitation.</b> Synthea produces realistic structure but not realistic clinical behaviour.
-          Breast Cancer Screening at 5.5% is a generator artifact, not a finding about care. The engine is
-          tested; the rates describe no real population.
+          <b>Limitation.</b> Synthea produces realistic structure but not realistic clinical behavior.
+          The untested CMS122 patients and Breast Cancer Screening at 5.5% are generator artifacts, not
+          findings about care. The engine is tested; the rates describe no real population.
         </p>
         <ul class="tags"><li>Python</li><li>YAML specs</li><li>SNOMED CT</li><li>LOINC</li><li>value-set validation</li><li>pytest</li></ul>
         <p class="links">
@@ -208,16 +204,17 @@
           functions over a two-grain fact design.
         </p>
         <p class="finding">
-          Roughly one claim in six is denied. Only <b>0.168%</b> are ever formally appealed — and
-          <b>40.1%</b> of appeals are overturned. The rate holds across all three years, so the
-          bottleneck is not claim merit. It is capacity to file.
+          Roughly one claim in six is denied. Only <b>0.168%</b> are ever formally appealed, and
+          <b>40.1%</b> of appeals are overturned. The pattern holds across all three years. The data
+          cannot say whether unappealed denials would have won, because appeals are selected for
+          winnability.
         </p>
         <p class="limit">
           <b>Limitation.</b> The data is aggregate and self-reported by issuers. No claim-level detail,
           no denial reason codes at claim level, and no way to tell whether successful appeals differ
           systematically from unsuccessful ones. It sizes the gap; it cannot work a single claim.
         </p>
-        <ul class="tags"><li>SQL</li><li>Python</li><li>window functions</li><li>dimensional modeling</li><li>revenue cycle</li></ul>
+        <ul class="tags"><li>SQL</li><li>Python</li><li>window functions</li><li>dimensional modeling</li><li>claims data</li></ul>
         <p class="links">
           <a class="live" href="https://adapapavandharma.github.io/denials-analytics/" target="_blank" rel="noopener">Open live dashboard →</a>
           <a href="https://github.com/adapapavandharma/denials-analytics" target="_blank" rel="noopener">Code</a>
@@ -296,9 +293,8 @@
           <span class="src">simulation against known ground truth</span>
         </div>
         <p class="what">
-          Five ways online experiments quietly fail, each <b>measured</b> rather than asserted — because
-          the only way to know whether an estimator recovers the truth is to run it on data where you set
-          the truth.
+          Five ways online experiments quietly fail, each <b>measured by simulation</b>. The only way to
+          know whether an estimator recovers the truth is to run it on data where you set the truth.
         </p>
         <p class="finding">
           Peeking ten times at a null experiment drives the false positive rate from a nominal 5% to
@@ -337,9 +333,9 @@
           <h3>Data Analytics Intern</h3>
           <p class="org">Agricultural Microbiomes Lab, Mississippi State University</p>
           <ul>
-            <li>Rebuilt the lab's DNA sequencing pipeline into a documented, tested tool that installs in one command — <b>cutting setup from several days to under an hour</b> — across <b>34 merged pull requests</b> covering continuous integration, packaging and cross-platform support.</li>
+            <li>Contributed <b>36 merged pull requests</b> to the lab's open-source DNA sequencing pipeline (maintained by Li Zhang), making it a documented, tested tool that installs in one command and runs on Linux, macOS, WSL2 and Windows.</li>
             <li>Validated pipeline output against an independently built implementation, <b>agreeing to within 0.01 percentage points</b> on every species and genus.</li>
-            <li>Processed and quality-controlled <b>2M+ sequencing reads across 19 samples</b>, automating construction of the NCBI reference database into a single command.</li>
+            <li>Processed and quality-controlled <b>2M+ sequencing reads across 19 samples</b>, and automated construction of the NCBI reference database into a single command.</li>
           </ul>
         </div>
       </div>
@@ -350,7 +346,7 @@
           <h3>Graduate Teaching Assistant</h3>
           <p class="org">Mississippi State University</p>
           <ul>
-            <li>Taught data cleaning, transformation and visualization in Python and R to <b>100+ students across six courses</b>, and reported completion and grade metrics that let instructors reach at-risk students earlier.</li>
+            <li>Taught data cleaning, transformation and visualization in Python and R to <b>100+ students across six courses</b>.</li>
           </ul>
         </div>
       </div>
@@ -361,9 +357,9 @@
           <h3>Graduate Research Assistant</h3>
           <p class="org">Mississippi State University</p>
           <ul>
-            <li>Managed and analyzed a <b>900,000+ record</b> public-health surveillance dataset, and prepared the written and oral reports presented to faculty across two departments.</li>
-            <li>Co-author (third of five) on a review manuscript under revision after peer review; contributed the data preparation, statistical modeling and results reporting.</li>
-            <li>Built the automated collection and cleaning workflow that standardized multi-source research data, <b>cutting per-dataset processing from hours to under 10 minutes</b>.</li>
+            <li>Cleaned and analyzed a <b>900,000+ record</b> Vesicular Stomatitis Virus (VSV) livestock-outbreak dataset, and presented the findings to Computer Science and Veterinary Medicine faculty.</li>
+            <li>Co-author (third of five) on a review manuscript under revision after peer review; contributed the data preparation, statistical modeling and results reporting, and drafted technical sections.</li>
+            <li>Built a Python/Selenium scraper that collected genome metadata for a poultry respiratory-disease project, <b>cutting collection from hours to under 10 minutes per dataset</b>.</li>
           </ul>
         </div>
       </div>
@@ -374,7 +370,7 @@
           <h3>Marketing Data Analyst Intern</h3>
           <p class="org">Viral Fission — Hyderabad, India</p>
           <ul>
-            <li>Built automated Power BI and GA4 reporting for campaign performance, <b>halving manual reporting time</b> for a team running national brand campaigns.</li>
+            <li>Built automated Power BI and Google Analytics 4 reporting for campaign performance, <b>halving manual reporting time</b> for a team running national brand campaigns.</li>
           </ul>
         </div>
       </div>
@@ -393,11 +389,11 @@
     <div class="skills">
       <div class="skill">
         <h3>Analysis &amp; programming</h3>
-        <ul><li>SQL</li><li>Python</li><li>pandas</li><li>NumPy</li><li>SciPy</li><li>scikit-learn</li><li>R</li><li>Advanced Excel</li></ul>
+        <ul><li>SQL</li><li>Python</li><li>pandas</li><li>NumPy</li><li>SciPy</li><li>scikit-learn</li><li>R</li><li>Excel</li></ul>
       </div>
       <div class="skill">
         <h3>Healthcare data</h3>
-        <ul><li>Claims &amp; encounter data</li><li>revenue cycle</li><li>HEDIS</li><li>CMS eCQM</li><li>value sets</li><li>SNOMED CT</li><li>LOINC</li><li>ICD-10</li><li>HIPAA</li></ul>
+        <ul><li>CMS claims-denial filings</li><li>CDC survey microdata</li><li>synthetic EHR data (Synthea)</li><li>HEDIS</li><li>CMS eCQM</li><li>value sets</li><li>SNOMED CT</li><li>LOINC</li></ul>
       </div>
       <div class="skill">
         <h3>Data management</h3>
@@ -405,7 +401,7 @@
       </div>
       <div class="skill">
         <h3>Statistics &amp; reporting</h3>
-        <ul><li>Survey-weighted estimation</li><li>A/B testing</li><li>power analysis</li><li>calibration</li><li>Power BI</li><li>Tableau</li><li>Matplotlib</li></ul>
+        <ul><li>Survey-weighted estimation</li><li>A/B testing</li><li>power analysis</li><li>calibration</li><li>Power BI</li><li>Matplotlib</li></ul>
       </div>
       <p class="note">
         <b>On Epic:</b> I am <b>not Epic certified</b>, and certification requires employer sponsorship.
@@ -448,8 +444,8 @@
     <div class="contact">
       <h2>Looking for a healthcare or research data role</h2>
       <p>
-        Work-authorized through June 2027 on F-1 OPT and eligible for the 24-month STEM extension —
-        no sponsorship required until 2029. Available immediately, and open to relocation.
+        Authorized to work in the U.S. on F-1 OPT through June 2027 and eligible for the 24-month STEM OPT extension through 2029. Available immediately.
+        Open to relocation.
       </p>
       <div class="cta">
         <a class="btn btn-primary" href="mailto:adapapavandharma@gmail.com">adapapavandharma@gmail.com</a>

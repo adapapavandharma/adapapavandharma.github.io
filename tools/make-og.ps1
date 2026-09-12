@@ -63,8 +63,8 @@ $g.DrawString('ADAPA', $fName, $bWhite, ($M - 8), 226)
 
 # role line with caret
 $g.DrawString('>', $fRole, $bCyan, ($M - 4), 344)
-$g.DrawString('Healthcare Data Analyst  |  Data Analyst', $fRole, $bWhite, ($M + 34), 344)
-$g.DrawString('SQL  |  Python  |  Tableau  |  Power BI  |  ETL  |  Epic Clarity & Cogito', $fSmall, $bMuted, $M, 396)
+$g.DrawString('Healthcare & Research Data Analyst', $fRole, $bWhite, ($M + 34), 344)
+$g.DrawString('SQL  |  Python  |  R  |  HEDIS / CMS eCQM  |  SNOMED CT  |  LOINC', $fSmall, $bMuted, $M, 396)
 
 # divider
 $pen = New-Object System.Drawing.Pen([System.Drawing.Color]::FromArgb(70, 34, 211, 238), 1)
@@ -72,10 +72,10 @@ $g.DrawLine($pen, $M, 452, ($W - $M), 452)
 
 # metrics row
 $metrics = @(
-  @{ v = '900K+'; l = 'records analyzed' },
-  @{ v = '95%';   l = 'processing time cut' },
-  @{ v = '87%';   l = 'forecast accuracy' },
-  @{ v = 'M.S.';  l = 'CSE, Mississippi State' }
+  @{ v = '126.9M'; l = 'denied claims' },
+  @{ v = '155.4M'; l = 'ED visits' },
+  @{ v = '13,810'; l = 'patient EHR' },
+  @{ v = 'M.S.';   l = 'Computer Science' }
 )
 $x = $M
 foreach ($item in $metrics) {

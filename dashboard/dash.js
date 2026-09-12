@@ -150,14 +150,14 @@ function viewDenials(d) {
   f.appendChild(h(`<p class="view-intro">
     Three years of CMS Transparency in Coverage filings — <b>${d.plan_years.toLocaleString()} plan-years</b>
     covering <b>${fmt(p.claims_denied)} denied claims</b> across every Qualified Health Plan on the
-    federal Marketplace. The question a revenue-cycle team has is not &ldquo;what is the denial
-    rate&rdquo;; it is where the recoverable money sits.</p>`));
+    federal Marketplace. The denial rate is only part of it; the other part is how few denials
+    are ever challenged.</p>`));
   f.appendChild(h(`<p class="source">Source: ${d.source}. All figures self-reported by issuers to CMS.</p>`));
 
   f.appendChild(kpis([
     { value: latest.denial_rate.toFixed(1), unit: '%', label: 'of claims denied', sub: `${latest.year}, ${latest.issuers} issuers` },
     { value: p.appeal_rate_pct.toFixed(3), unit: '%', label: 'of denials ever appealed', sub: 'fewer than 2 in every 1,000' },
-    { value: p.overturn_rate_pct.toFixed(1), unit: '%', label: 'of appeals overturned', sub: 'appealing usually works' },
+    { value: p.overturn_rate_pct.toFixed(1), unit: '%', label: 'of appeals overturned', sub: 'about two in five' },
     { value: fmt(p.denials_never_appealed), unit: '', label: 'denials never challenged at all' },
   ]));
 
@@ -174,12 +174,12 @@ function viewDenials(d) {
   ));
 
   f.appendChild(h(`<div class="callout">
-    <b>The binding constraint is capacity to file, not claim merit.</b> Multiplying
+    <b>Few denials are ever challenged.</b> Multiplying
     ${fmt(p.denials_never_appealed)} unappealed denials by the observed ${p.overturn_rate_pct.toFixed(1)}%
     success rate gives roughly ${fmt(p.implied_overturnable_if_all_appealed)} potentially
-    overturnable claims — but that is an <b>upper bound, not a forecast</b>. Appeals are
-    self-selected for winnability, so the marginal unappealed denial is certainly weaker than
-    the average appealed one.
+    overturnable claims, but that is an <b>upper bound, not a forecast</b>. Appeals are
+    self-selected for winnability, so the typical unappealed denial is almost certainly weaker
+    than the average appealed one. This data cannot say how many would win.
   </div>`));
 
   const g = h('<div class="grid2"></div>');
@@ -277,13 +277,14 @@ function viewQuality(d) {
   const c122 = byId.CMS122.decomposition;
   if (c122) {
     f.appendChild(h(`<div class="callout warn">
-      <b>The headline number for CMS122 is not about blood sugar.</b> It scores
-      ${byId.CMS122.rate.toFixed(1)}% poor control — but decomposing the numerator gives
+      <b>The CMS122 rate reflects the synthetic data, not blood sugar.</b> It scores
+      ${byId.CMS122.rate.toFixed(1)}% poor control, but decomposing the numerator gives
       <b>${c122.failed_on_a_result} patient failing on a recorded result</b> and
-      <b>${c122.counted_because_untested} counted because they were never tested</b>
+      <b>${c122.counted_because_untested} counted because they had no HbA1c test on record</b>
       (${(c122.untested_share_of_numerator * 100).toFixed(0)}% of the numerator).
-      Both are &ldquo;poor control&rdquo; by the specification, but one is a clinical problem
-      and the other is an outreach problem, and they call for completely different interventions.
+      The specification counts an untested patient as poor control, so the engine is doing what
+      it should. The missing tests are an artifact of how the Synthea generator schedules labs,
+      not a finding about care.
     </div>`));
   }
 
@@ -301,8 +302,8 @@ function viewQuality(d) {
     'The same measure, by age band',
     `An aggregate hides a work plan. Blood pressure control runs <b>57% at ages 18–44 against 89%
      at 75+</b> — a 32-point gap invisible in the ${byId.CBP.rate.toFixed(1)}% headline. Poor
-     glycaemic control shows the same pattern in reverse. Younger adults with chronic disease are
-     the population failing every control measure.`,
+     glycemic control shows the same pattern in reverse. The data is synthetic, so this shows what
+     stratification can surface, not a fact about real patients.`,
     groupedBar(stratRows, {
       xKey: 'measure', unit: '%', yLabel: 'rate (%)',
       series: ages.map((a) => ({ key: a, label: a })),
@@ -411,9 +412,9 @@ function viewExperiments(d) {
   const ten = d.peeking.find((p) => p.looks === 10);
 
   f.appendChild(h(`<p class="view-intro">
-    Five failure modes that quietly break online experiments, each measured against
-    <b>known ground truth</b> rather than asserted. Simulation is the right instrument: the
-    subject is the behaviour of estimators, and the only way to know whether one recovers the
+    Five failure modes that quietly break online experiments, each measured by simulation against
+    <b>known ground truth</b>. Simulation is the right instrument: the
+    subject is the behavior of estimators, and the only way to know whether one recovers the
     truth is to run it where you set the truth.</p>`));
   f.appendChild(h('<p class="source">Every figure generated by the code in the repository. Deterministic given a fixed seed.</p>'));
 
